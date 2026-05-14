@@ -1,74 +1,66 @@
+# Studio Inova — Strict Rebuild Plan
 
-## Goal
+Source confirmed: `artifacts/studio-inova/` from your uploads. It's a Vite + React + Wouter + Tailwind + shadcn project with 7 pages, ~75 source files, and 14 image assets. I'll port it 1:1 into this TanStack Start template — same code, same text, same styles, same animations.
 
-Bring the code from `studioinova/studio-inova-final` into this Lovable project. Lovable can't import an existing GitHub repo directly, so we'll connect this project to a **new** GitHub repo, then merge your existing code into it locally and push.
+## What gets ported (no edits to content)
 
-(Note: I tried to view your repo and it returned 404 — it's private or the URL is slightly different. That's fine; the steps below work either way.)
+**Pages (text/layout preserved exactly):**
+- Home (246 lines)
+- Products (482 lines — Detect AI, Inova Pitch, etc.)
+- About (165 lines + your illustration assets)
+- Contact (204 lines — exact message box UI from source)
+- PrivacyPolicy, TermsOfService, NotFound
 
-## Step 1 — Connect this Lovable project to GitHub
+**Layout:** `Navbar`, `Footer` from `components/layout/`
 
-You do this from the UI (I can't click it for you):
+**Styles:** `src/index.css` (330 lines — white & blue minimalist tokens, animations) replaces the template's `styles.css`
 
-1. In the chat input, click the **Plus (+)** button (bottom-left)
-2. Choose **GitHub → Connect project**
-3. Authorize the Lovable GitHub App
-4. Pick the `studioinova` org (or your account)
-5. Click **Create Repository** — this creates a brand-new repo (e.g. `studio-inova-lovable`) seeded with this project's code
+**Components:** all `components/ui/*` from source (incl. extras: button-group, empty, field, input-group, item, kbd, spinner, toast, toaster) overlay the template's shadcn folder
 
-From now on, two-way sync is live: pushes to GitHub appear in Lovable, and Lovable edits push to GitHub.
+**Hooks:** `use-mobile`, `use-toast`
 
-## Step 2 — Merge your existing code locally
+**Assets:** all 14 files in `public/` (logos, slides, hero-bg, founder photo, illustrations, favicons, opengraph) → copied to this project's `public/`
 
-On your machine:
+**Fonts:** Inter via Google Fonts (loaded in root head)
 
-```bash
-# Clone the new Lovable repo
-git clone https://github.com/studioinova/<new-lovable-repo>.git
-cd <new-lovable-repo>
+## Routing translation (Wouter → TanStack Router)
 
-# Add your existing repo as a second remote and fetch it
-git remote add legacy https://github.com/studioinova/studio-inova-final.git
-git fetch legacy
-```
+The source uses Wouter `<Switch><Route path="/x">`. I'll convert each to a TanStack file route — same URLs, same components:
 
-Then copy your source files (`src/`, `public/`, assets) from the legacy repo into the Lovable repo. **Keep these Lovable files as-is** — they're the framework baseline:
-
-- `package.json` (merge your dependencies into it; don't replace)
-- `vite.config.ts`
-- `src/router.tsx`
-- `src/routes/__root.tsx`
-- `src/styles.css` (Tailwind v4 setup)
-- `tsconfig.json`, `wrangler.jsonc`, `components.json`
-
-```bash
-git add .
-git commit -m "Import code from studio-inova-final"
-git push origin main
-```
-
-The push triggers a sync — the code lands in Lovable automatically.
-
-## Step 3 — Adapt to Lovable's stack
-
-Your repo is Vite + React, which is the closest possible match, but a few things differ:
-
-| Your repo (likely) | Lovable |
+| Source route | New file |
 |---|---|
-| React Router (`<BrowserRouter>`, `<Routes>`) | TanStack Router with file-based routes in `src/routes/` |
-| `tailwind.config.js` | Tailwind v4 via `@theme` in `src/styles.css` |
-| `src/pages/` or `src/App.tsx` route table | One file per route in `src/routes/` (e.g. `about.tsx` → `/about`) |
-| Plain React 18 | React 19 |
+| `/` | `src/routes/index.tsx` |
+| `/products` | `src/routes/products.tsx` |
+| `/about` | `src/routes/about.tsx` |
+| `/contact` | `src/routes/contact.tsx` |
+| `/privacy-policy` | `src/routes/privacy-policy.tsx` |
+| `/terms-of-service` | `src/routes/terms-of-service.tsx` |
+| `/admin` | `src/routes/admin.tsx` |
+| 404 | `__root.tsx` notFoundComponent |
 
-After the push, I'll help convert routes and styling. Most components, hooks, and assets port over unchanged.
+Each route file will be a thin wrapper that imports the original page component unchanged. Navbar + Footer move into `__root.tsx` so they wrap every route (matches source's `<Router>` shell).
 
-## Step 4 — Backend (if needed)
+Internal links inside pages (currently `<Link href="…">` from wouter) will be swapped to `@tanstack/react-router`'s `<Link to="…">`. This is the only mechanical edit to page source — text, JSX structure, classes, animations stay identical.
 
-If your old project used Supabase, Firebase, or a custom API, tell me and I'll wire it up via **Lovable Cloud** (managed Supabase) or keep your existing backend.
+## Form / contact behavior
 
----
+Source `Contact.tsx` uses `react-hook-form` + `zod` + a toast on submit (no real backend call in the code). I'll keep that exact behavior — no invented API. If the original posts to an external service, I'll wire that same call; if it's just local state + toast, I'll keep it that way.
 
-## What I need from you
+## Dependencies to add
 
-1. Do **Step 1** in the UI now and let me know when the new repo exists.
-2. Confirm whether the legacy repo uses **React Router**, has a **backend**, and uses **Tailwind** (any version).
-3. Then push the merged code and tell me — I'll handle the routing/styling conversion in build mode.
+`wouter` is removed (replaced by tanstack router). I'll add what's actually used: `framer-motion`, `react-hook-form`, `@hookform/resolvers`, `zod`, `react-icons`, `embla-carousel-react`, `cmdk`, `date-fns`, `react-day-picker`, `input-otp`, `next-themes`, `recharts`, `sonner`, `vaul`, `tw-animate-css`, plus any missing `@radix-ui/*` packages (most already installed).
+
+## Out of scope
+
+- No design changes, no copy edits, no new features.
+- No Lovable Cloud / backend (source has none).
+- The template's placeholder `index.tsx` and default `styles.css` get replaced.
+
+## Technical notes
+
+- TanStack Start file-routing is generated automatically — I won't touch `routeTree.gen.ts`.
+- `__root.tsx` will keep its `shellComponent` (html/head/body) and add Navbar/Footer + QueryClientProvider + TooltipProvider + Toaster around `<Outlet />`, plus the Inter font link in `head()`.
+- `import.meta.env.BASE_URL` wrapper from source isn't needed (TanStack handles base path).
+- `@/` alias already points to `src/` in this template — source imports work as-is.
+
+After approval I'll execute the port end-to-end and verify the build before handing back.
