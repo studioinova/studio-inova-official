@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Products", href: "/products" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/" as const },
+  { name: "Products", href: "/products" as const },
+  { name: "About", href: "/about" as const },
+  { name: "Contact", href: "/contact" as const },
 ];
 
 export function Navbar() {
-  const [location] = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+  const [, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export function Navbar() {
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <header
@@ -35,7 +35,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="inline-flex items-center gap-2.5 leading-none">
+          <Link to="/" className="inline-flex items-center gap-2.5 leading-none">
             <img
               src="/logo.png"
               alt="Studio Inova"
@@ -51,9 +51,9 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location === link.href ? "text-primary" : "text-muted-foreground"
+                  pathname === link.href ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {link.name}
@@ -77,9 +77,9 @@ export function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className={`text-base font-medium py-2 px-4 rounded-lg transition-colors ${
-                location === link.href
+                pathname === link.href
                   ? "bg-primary/10 text-primary"
                   : "text-foreground hover:bg-muted"
               }`}
