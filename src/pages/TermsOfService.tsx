@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 
 export default function TermsOfService() {
@@ -11,7 +11,7 @@ export default function TermsOfService() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#007AFF] hover:underline mb-12">
+        <Link to="/" className="inline-flex items-center gap-2 text-sm text-[#007AFF] hover:underline mb-12">
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
@@ -150,7 +150,7 @@ export default function TermsOfService() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-100 flex items-center justify-between">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#007AFF] hover:underline">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm text-[#007AFF] hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
