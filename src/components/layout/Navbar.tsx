@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
