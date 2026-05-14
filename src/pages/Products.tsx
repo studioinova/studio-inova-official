@@ -274,7 +274,7 @@ export default function Products() {
                   </div>
 
                   {/* Script rows */}
-                  <div className="flex-1 overflow-hidden divide-y" style={{ divideColor: "#2e3340" }}>
+                  <div className="flex-1 overflow-hidden divide-y [&>*]:border-[#2e3340]">
                     {[
                       {
                         jp: { char: "侍一郎", line: "「お前は何者だ？この地に何をしに来た！」" },

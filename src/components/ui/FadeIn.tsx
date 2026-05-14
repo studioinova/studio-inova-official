@@ -1,11 +1,12 @@
-import React, { ReactNode } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
-interface FadeInProps extends HTMLMotionProps<"div"> {
+interface FadeInProps {
   children: ReactNode;
   delay?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
   fullWidth?: boolean;
+  className?: string;
 }
 
 export function FadeIn({
@@ -14,7 +15,6 @@ export function FadeIn({
   direction = "up",
   fullWidth = false,
   className,
-  ...props
 }: FadeInProps) {
   const directions = {
     up: { y: 30, x: 0 },
@@ -42,7 +42,6 @@ export function FadeIn({
         ease: [0.21, 0.47, 0.32, 0.98],
       }}
       className={fullWidth ? `w-full ${className || ""}` : className}
-      {...props}
     >
       {children}
     </motion.div>
