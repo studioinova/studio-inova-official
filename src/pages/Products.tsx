@@ -182,7 +182,6 @@ export default function Products() {
               </div>
             </div>
           </FadeIn>
-
           {/* Coming Soon: AI Manga Translator */}
           <FadeIn delay={0.1}>
             <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row-reverse group">
@@ -330,7 +329,6 @@ export default function Products() {
               </div>
             </div>
           </FadeIn>
-
         </div>
 
         {/* ── Studio Inova E-books ── */}
