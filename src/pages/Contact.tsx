@@ -68,7 +68,7 @@ export default function Contact() {
       if (response.ok && result.success) {
         toast({
           title: "Success!",
-          description: "Message sent! Check your studioinova.official@gmail.com inbox.",
+          description: "Message sent!",
         });
         form.reset();
       } else {
