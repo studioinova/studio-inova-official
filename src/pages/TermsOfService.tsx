@@ -144,7 +144,7 @@ export default function TermsOfService() {
             </div>
             <p>
               If you have any questions or concerns about these Terms of Service, please contact us at{" "}
-              <a href="mailto:hello@studioinova.com" className="text-[#007AFF] hover:underline font-medium">hello@studioinova.com</a>.
+              <a href="mailto:studioinova.official@gmail.com" className="text-[#007AFF] hover:underline font-medium">studioinova.official@gmail.com</a>.
             </p>
           </section>
         </div>
