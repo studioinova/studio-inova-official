@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Mail, Send, Loader2 } from "lucide-react";
+import { Mail, Send, Loader2, MapPin } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -111,6 +111,16 @@ export default function Contact() {
                 <div>
                   <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Email</h4>
                   <p className="text-foreground font-semibold">studioinova.official@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6">
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center border border-primary/10">
+                  <MapPin className="text-primary w-7 h-7" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Location</h4>
+                  <p className="text-foreground font-semibold">Dhaka, Bangladesh</p>
                 </div>
               </div>
             </div>
