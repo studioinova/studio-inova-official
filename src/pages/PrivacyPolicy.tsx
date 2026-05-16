@@ -141,7 +141,7 @@ export default function PrivacyPolicy() {
             </div>
             <p>
               If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at{" "}
-              <a href="mailto:hello@studioinova.com" className="text-[#007AFF] hover:underline font-medium">hello@studioinova.com</a>.
+              <a href="mailto:studioinova.official@gmail.com" className="text-[#007AFF] hover:underline font-medium">studioinova.official@gmail.com</a>.
             </p>
             <p className="mt-3 text-sm text-gray-500">
               We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated effective date.
