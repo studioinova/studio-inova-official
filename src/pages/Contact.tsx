@@ -96,7 +96,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">Get in Touch</h1>
-          <p className="text-lg text-muted-foreground italic">"Simple solutions for complex problems."</p>
+          <p className="text-lg text-muted-foreground italic">We'd love to hear your feedback and suggestions</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
