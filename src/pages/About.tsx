@@ -151,7 +151,7 @@ export default function About() {
 
                       {/* The missing bracket issue is completely fixed here */}
                       <p className="text-foreground font-bold text-sm md:text-base mt-8 tracking-wide">
-                        "At Studio Inova, we don't just build apps; we build confidence."
+                        "At Studio Inova, we don't just build apps; we build solutions."
                       </p>
                     </div>
 
