@@ -51,10 +51,10 @@ function DetectAICarousel() {
           const offset = getOffset(i);
           const abs = Math.abs(offset);
           const isActive = offset === 0;
-          const translateX = offset * 105;
-          const rotateY = offset * -28;
-          const scale = isActive ? 1 : 0.78;
-          const opacity = abs > 1 ? 0 : isActive ? 1 : 0.5;
+          const translateX = offset * 95;
+          const rotateY = offset * -25;
+          const scale = isActive ? 1 : abs === 1 ? 0.8 : 0.62;
+          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.55 : 0.3;
           const zIndex = 10 - abs;
           return (
             <button
@@ -69,7 +69,7 @@ function DetectAICarousel() {
                 width: "190px",
                 aspectRatio: "9/16",
                 transformStyle: "preserve-3d",
-                pointerEvents: abs > 1 ? "none" : "auto",
+                pointerEvents: abs > 2 ? "none" : "auto",
                 filter: isActive
                   ? "drop-shadow(0 20px 30px rgba(0,122,255,0.25))"
                   : "drop-shadow(0 10px 20px rgba(0,0,0,0.12))",
