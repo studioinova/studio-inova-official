@@ -5,19 +5,18 @@ import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-1.png", alt: "Detect AI — Home" },
-  { src: "/detect-ai-slide-2.png", alt: "Detect AI — AI Text Detector" },
-  { src: "/detect-ai-slide-3.png", alt: "Detect AI — Scanning" },
-  { src: "/detect-ai-slide-4.png", alt: "Detect AI — Results" },
-  { src: "/detect-ai-slide-5.png", alt: "Detect AI — Scan History" },
+  { src: "/detect-ai-slide-2.png", alt: "Text Detection", label: "Text Detection" },
+  { src: "/detect-ai-slide-4.png", alt: "Image Detection", label: "Image Detection" },
+  { src: "/detect-ai-slide-3.png", alt: "Video Detection", label: "Video Detection" },
 ];
 
 function DetectAICarousel() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef<number | null>(null);
+  const total = DETECT_AI_SLIDES.length;
 
-  const prev = () => setCurrent(i => (i === 0 ? DETECT_AI_SLIDES.length - 1 : i - 1));
-  const next = () => setCurrent(i => (i === DETECT_AI_SLIDES.length - 1 ? 0 : i + 1));
+  const prev = () => setCurrent(i => (i - 1 + total) % total);
+  const next = () => setCurrent(i => (i + 1) % total);
 
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -30,61 +29,99 @@ function DetectAICarousel() {
     touchStartX.current = null;
   };
 
+  const getOffset = (i: number) => {
+    let diff = i - current;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+  };
+
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center gap-4 select-none">
-      {/* Phone frame */}
-      <div className="relative flex items-center justify-center w-full">
-        {/* Left arrow */}
-        <button
-          onClick={prev}
-          className="absolute left-0 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-opacity hover:opacity-80"
-          style={{ background: "#007AFF" }}
-          aria-label="Previous"
-        >
-          <ChevronLeft className="w-5 h-5 text-white" />
-        </button>
-
-        {/* Slide */}
-        <div
-          className="mx-12 flex items-center justify-center"
-          style={{ width: "240px", aspectRatio: "9/16", background: "transparent" }}
-          onTouchStart={onTouchStart}
-          onTouchEnd={onTouchEnd}
-        >
-          <img
-            src={DETECT_AI_SLIDES[current].src}
-            alt={DETECT_AI_SLIDES[current].alt}
-            className="w-full h-full object-contain transition-opacity duration-300"
-            style={{ display: "block" }}
-          />
-        </div>
-
-        {/* Right arrow */}
-        <button
-          onClick={next}
-          className="absolute right-0 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-opacity hover:opacity-80"
-          style={{ background: "#007AFF" }}
-          aria-label="Next"
-        >
-          <ChevronRight className="w-5 h-5 text-white" />
-        </button>
+    <div className="relative w-full flex flex-col items-center justify-center gap-5 select-none">
+      {/* 3D Coverflow stage */}
+      <div
+        className="relative w-full flex items-center justify-center"
+        style={{ perspective: "1400px", height: "400px" }}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        {DETECT_AI_SLIDES.map((slide, i) => {
+          const offset = getOffset(i);
+          const abs = Math.abs(offset);
+          const isActive = offset === 0;
+          const translateX = offset * 105;
+          const rotateY = offset * -28;
+          const scale = isActive ? 1 : 0.78;
+          const opacity = abs > 1 ? 0 : isActive ? 1 : 0.5;
+          const zIndex = 10 - abs;
+          return (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={slide.label}
+              className="absolute top-1/2 left-1/2 transition-all duration-500 ease-out focus:outline-none"
+              style={{
+                transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
+                opacity,
+                zIndex,
+                width: "190px",
+                aspectRatio: "9/16",
+                transformStyle: "preserve-3d",
+                pointerEvents: abs > 1 ? "none" : "auto",
+                filter: isActive
+                  ? "drop-shadow(0 20px 30px rgba(0,122,255,0.25))"
+                  : "drop-shadow(0 10px 20px rgba(0,0,0,0.12))",
+              }}
+            >
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="w-full h-full object-contain"
+                draggable={false}
+              />
+            </button>
+          );
+        })}
       </div>
 
-      {/* Dot indicators */}
-      <div className="flex items-center gap-2">
-        {DETECT_AI_SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className="rounded-full transition-all"
-            style={{
-              width: i === current ? "20px" : "8px",
-              height: "8px",
-              background: i === current ? "#007AFF" : "rgba(0,122,255,0.25)",
-            }}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
+      {/* Active label */}
+      <p className="text-sm font-semibold tracking-wide -mt-2" style={{ color: "#007AFF" }}>
+        {DETECT_AI_SLIDES[current].label}
+      </p>
+
+      {/* PREV / NEXT */}
+      <div className="flex items-center gap-3">
+        <button
+          onClick={prev}
+          className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] border transition-all hover:scale-105"
+          style={{ borderColor: "rgba(0,122,255,0.3)", color: "#007AFF", background: "rgba(0,122,255,0.04)" }}
+        >
+          <ChevronLeft className="w-3.5 h-3.5" /> PREV
+        </button>
+
+        <div className="flex items-center gap-1.5 mx-2">
+          {DETECT_AI_SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className="rounded-full transition-all"
+              style={{
+                width: i === current ? "18px" : "6px",
+                height: "6px",
+                background: i === current ? "#007AFF" : "rgba(0,122,255,0.25)",
+              }}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={next}
+          className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] text-white transition-all hover:scale-105"
+          style={{ background: "#007AFF" }}
+        >
+          NEXT <ChevronRight className="w-3.5 h-3.5" />
+        </button>
       </div>
     </div>
   );
