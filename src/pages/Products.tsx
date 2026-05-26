@@ -6,8 +6,10 @@ import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
   { src: "/detect-ai-slide-2.png", alt: "Text Detection", label: "Text Detection" },
-  { src: "/detect-ai-slide-4.png", alt: "Image Detection", label: "Image Detection" },
-  { src: "/detect-ai-slide-3.png", alt: "Video Detection", label: "Video Detection" },
+  { src: "/detect-ai-slide-3.png", alt: "Image Detection", label: "Image Detection" },
+  { src: "/detect-ai-slide-4.png", alt: "Video Detection", label: "Video Detection" },
+  { src: "/detect-ai-slide-1.png", alt: "Deep Scan", label: "Deep Scan" },
+  { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" },
 ];
 
 function DetectAICarousel() {
