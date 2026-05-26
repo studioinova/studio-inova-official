@@ -5,10 +5,11 @@ import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-1.png", alt: "Detect AI — Main Interface" },
+  { src: "/detect-ai-slide-1.png", alt: "Detect AI — Home" },
   { src: "/detect-ai-slide-2.png", alt: "Detect AI — AI Text Detector" },
-  { src: "/detect-ai-slide-3.png", alt: "Detect AI — Scan Results" },
-  { src: "/detect-ai-slide-4.png", alt: "Detect AI — Scan History" },
+  { src: "/detect-ai-slide-3.png", alt: "Detect AI — Scanning" },
+  { src: "/detect-ai-slide-4.png", alt: "Detect AI — Results" },
+  { src: "/detect-ai-slide-5.png", alt: "Detect AI — Scan History" },
 ];
 
 function DetectAICarousel() {
@@ -45,15 +46,15 @@ function DetectAICarousel() {
 
         {/* Slide */}
         <div
-          className="mx-12 rounded-2xl overflow-hidden shadow-2xl border border-slate-200"
-          style={{ width: "210px", aspectRatio: "9/16", background: "#fff" }}
+          className="mx-12 flex items-center justify-center"
+          style={{ width: "240px", aspectRatio: "9/16", background: "transparent" }}
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
           <img
             src={DETECT_AI_SLIDES[current].src}
             alt={DETECT_AI_SLIDES[current].alt}
-            className="w-full h-full object-cover transition-opacity duration-300"
+            className="w-full h-full object-contain transition-opacity duration-300"
             style={{ display: "block" }}
           />
         </div>
