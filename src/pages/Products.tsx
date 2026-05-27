@@ -5,15 +5,16 @@ import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-2.png", alt: "Text Detection", label: "Text Detection" },
-  { src: "/detect-ai-slide-3.png", alt: "Image Detection", label: "Image Detection" },
-  { src: "/detect-ai-slide-4.png", alt: "Video Detection", label: "Video Detection" },
-  { src: "/detect-ai-slide-1.png", alt: "Deep Scan", label: "Deep Scan" },
+  { src: "/detect-ai-slide-2.png", alt: "Initial Input", label: "Initial Input" },
+  { src: "/detect-ai-slide-3.png", alt: "Scanning", label: "Scanning" },
   { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" },
+  { src: "/detect-ai-slide-4.png", alt: "Results", label: "Results" },
+  { src: "/detect-ai-slide-1.png", alt: "Secondary Input", label: "Secondary Input" },
 ];
 
 function DetectAICarousel() {
-  const [current, setCurrent] = useState(0);
+  // Start with the "Scan History" slide active (center index = 2)
+  const [current, setCurrent] = useState(2);
   const touchStartX = useRef<number | null>(null);
   const total = DETECT_AI_SLIDES.length;
 
@@ -40,10 +41,18 @@ function DetectAICarousel() {
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center gap-5 select-none">
-      {/* 3D Coverflow stage */}
+      {/* Red heading */}
+      <h3
+        className="text-center font-bold tracking-tight uppercase text-[15px] sm:text-base md:text-lg leading-tight px-2"
+        style={{ color: "#e02424", fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif" }}
+      >
+        Tight Mockups (Image Crop Limit)
+      </h3>
+
+      {/* 3D Coverflow stage — tightly cropped, overlapping stack */}
       <div
         className="relative w-full flex items-center justify-center"
-        style={{ perspective: "1400px", height: "400px" }}
+        style={{ perspective: "1400px", height: "380px" }}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -51,10 +60,11 @@ function DetectAICarousel() {
           const offset = getOffset(i);
           const abs = Math.abs(offset);
           const isActive = offset === 0;
-          const translateX = offset * 95;
-          const rotateY = offset * -25;
-          const scale = isActive ? 1 : abs === 1 ? 0.8 : 0.62;
-          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.55 : 0.3;
+          // Tight overlap — phones stack into each other
+          const translateX = offset * 70;
+          const rotateY = offset * -22;
+          const scale = isActive ? 1.1 : 0.8;
+          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.85 : 0.55;
           const zIndex = 10 - abs;
           return (
             <button
@@ -66,19 +76,19 @@ function DetectAICarousel() {
                 transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
                 opacity,
                 zIndex,
-                width: "190px",
-                aspectRatio: "9/16",
+                width: "180px",
+                aspectRatio: "9/19",
                 transformStyle: "preserve-3d",
                 pointerEvents: abs > 2 ? "none" : "auto",
                 filter: isActive
-                  ? "drop-shadow(0 20px 30px rgba(0,122,255,0.25))"
-                  : "drop-shadow(0 10px 20px rgba(0,0,0,0.12))",
+                  ? "drop-shadow(0 20px 30px rgba(0,122,255,0.28))"
+                  : "drop-shadow(0 10px 18px rgba(0,0,0,0.18))",
               }}
             >
               <img
                 src={slide.src}
                 alt={slide.alt}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-[28px]"
                 draggable={false}
               />
             </button>
@@ -87,36 +97,39 @@ function DetectAICarousel() {
       </div>
 
       {/* Active label */}
-      <p className="text-sm font-semibold tracking-wide -mt-2" style={{ color: "#007AFF" }}>
+      <p className="text-sm font-semibold tracking-wide -mt-1" style={{ color: "#007AFF" }}>
         {DETECT_AI_SLIDES[current].label}
       </p>
+
+      {/* Pager dots — 4 dots + 1 active bar */}
+      <div className="flex items-center gap-2">
+        {DETECT_AI_SLIDES.map((_, i) => {
+          const active = i === current;
+          return (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className="rounded-full transition-all duration-300"
+              style={{
+                width: active ? "22px" : "8px",
+                height: "8px",
+                background: active ? "#007AFF" : "rgba(0,122,255,0.28)",
+              }}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          );
+        })}
+      </div>
 
       {/* PREV / NEXT */}
       <div className="flex items-center gap-3">
         <button
           onClick={prev}
           className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] border transition-all hover:scale-105"
-          style={{ borderColor: "rgba(0,122,255,0.3)", color: "#007AFF", background: "rgba(0,122,255,0.04)" }}
+          style={{ borderColor: "rgba(0,122,255,0.4)", color: "#007AFF", background: "rgba(0,122,255,0.06)" }}
         >
           <ChevronLeft className="w-3.5 h-3.5" /> PREV
         </button>
-
-        <div className="flex items-center gap-1.5 mx-2">
-          {DETECT_AI_SLIDES.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className="rounded-full transition-all"
-              style={{
-                width: i === current ? "18px" : "6px",
-                height: "6px",
-                background: i === current ? "#007AFF" : "rgba(0,122,255,0.25)",
-              }}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
-
         <button
           onClick={next}
           className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] text-white transition-all hover:scale-105"
