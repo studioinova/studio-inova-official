@@ -115,11 +115,11 @@ export default function Home() {
             <FadeIn delay={0.3}>
               <div className="inova-card p-8 border border-border/40 h-full">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-6 h-6" />
+                  <Compass className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Trusted</h3>
+                <h3 className="text-xl font-bold mb-3">Our Philosophy</h3>
                 <p className="text-muted-foreground">
-                  Engineered for long-term trust. We prioritize your privacy and data security above all, building platforms you can rely on for years.
+                  We believe in building transparent, step-by-step solutions without rushed or fake claims. Our focus is on steady growth, honest features, and creating digital products that bring genuine, long-term value.
                 </p>
               </div>
             </FadeIn>
