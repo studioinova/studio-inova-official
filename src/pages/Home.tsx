@@ -36,6 +36,39 @@ export default function Home() {
               Innovation Starts Here
             </p>
           </FadeIn>
+
+          <FadeIn direction="up" delay={0.3}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-8">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center px-7 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:brightness-110"
+                style={{ background: "#007AFF", borderRadius: "8px", minWidth: "180px" }}
+              >
+                Explore Our App
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center px-7 py-3 text-sm font-semibold transition-all"
+                style={{
+                  border: "2px solid #007AFF",
+                  color: "#007AFF",
+                  background: "transparent",
+                  borderRadius: "8px",
+                  minWidth: "180px",
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = "#007AFF";
+                  e.currentTarget.style.color = "#fff";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#007AFF";
+                }}
+              >
+                Know About Us
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
       {/* Description Section */}
