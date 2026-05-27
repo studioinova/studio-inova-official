@@ -46,7 +46,7 @@ function DetectAICarousel() {
         className="text-center font-bold tracking-tight uppercase text-[15px] sm:text-base md:text-lg leading-tight px-2"
         style={{ color: "#e02424", fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif" }}
       >
-        Tight Mockups (Image Crop Limit)
+        ​
       </h3>
 
       {/* 3D Coverflow stage — tightly cropped, overlapping stack */}
