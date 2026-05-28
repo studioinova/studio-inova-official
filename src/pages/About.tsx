@@ -59,52 +59,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values Detailed */}
-      <section className="bg-slate-50 py-24 border-y border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">The Pillars of Our Work</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              These principles guide every line of code we write and every
-              interface we design.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Lightbulb,
-                title: "Simple",
-                desc: "Complexity is easy; simplicity takes hard work. We distill powerful technology into interfaces that feel naturally intuitive.",
-              },
-              {
-                icon: Target,
-                title: "Effective",
-                desc: "We don't build software for the sake of it. If a feature doesn't directly solve a user's problem efficiently, it doesn't ship.",
-              },
-              {
-                icon: Shield,
-                title: "Trusted",
-                desc: "Trust is earned in drops and lost in buckets. We prioritize transparency, robust security, and absolute data privacy.",
-              },
-            ].map((value, i) => (
-              <FadeIn key={value.title} delay={i * 0.1}>
-                <Card className="inova-card h-full border-none">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-xl bg-primary/5 text-primary flex items-center justify-center mb-6">
-                      <value.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {value.desc}
-                    </p>
-                  </CardContent>
-                </Card>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
      
       {/* Team / Leadership Section */}
