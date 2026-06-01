@@ -1,0 +1,15 @@
+# Studio Inova
+
+> Studio Inova is a digital studio building minimalist, high-impact AI tools, apps, and clean digital experiences.
+
+## Pages
+
+- [Home](/): Overview of Studio Inova, our values, services, and approach.
+- [About](/about): Mission, philosophy, and the founder behind Studio Inova.
+- [Products](/products): Detect AI tool and the Zero-to-App AI learning e-book.
+- [Contact](/contact): Reach out with feedback, suggestions, or project inquiries.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy)
+- [Terms of Service](/terms-of-service)

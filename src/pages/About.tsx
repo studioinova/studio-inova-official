@@ -76,7 +76,7 @@ export default function About() {
                       </div>
                       <img 
                         src="/sazid-founder-ceo.png"
-                        alt="Sazid" 
+                        alt="Sazid, Founder of Studio Inova" 
                         className="w-full h-full object-cover absolute inset-0 z-10"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';

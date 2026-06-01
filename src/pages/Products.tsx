@@ -41,13 +41,6 @@ function DetectAICarousel() {
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center gap-5 select-none">
-      {/* Red heading */}
-      <h3
-        className="text-center font-bold tracking-tight uppercase text-[15px] sm:text-base md:text-lg leading-tight px-2"
-        style={{ color: "#e02424", fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif" }}
-      >
-        ​
-      </h3>
 
       {/* 3D Coverflow stage — tightly cropped, overlapping stack */}
       <div

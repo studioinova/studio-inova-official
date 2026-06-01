@@ -28,6 +28,7 @@ export default function Home() {
           <FadeIn direction="up">
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
               STUDIO INOVA
+              <span className="sr-only"> — Minimalist AI Tools & Apps</span>
             </h1>
           </FadeIn>
 
@@ -69,14 +70,6 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
-        </div>
-      </section>
-      {/* Description Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn direction="up">
-              <div></div> 
-            </FadeIn>
         </div>
       </section>
       {/* Core Values Section */}

@@ -55,16 +55,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1" },
-      { title: "Studio Inova official" },
-      { name: "description", content: "We are a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future." },
-      { property: "og:title", content: "Studio Inova official" },
-      { property: "og:description", content: "We are a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e0b30969-da21-418a-ae3e-db860afef071/id-preview-b570a8a7--396016f2-125f-4706-a4a3-b67713d4142c.lovable.app-1779956622436.png" },
+      { property: "og:site_name", content: "Studio Inova" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Studio Inova official" },
-      { name: "twitter:description", content: "We are a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future." },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e0b30969-da21-418a-ae3e-db860afef071/id-preview-b570a8a7--396016f2-125f-4706-a4a3-b67713d4142c.lovable.app-1779956622436.png" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -76,6 +69,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap",
       },
       { rel: "stylesheet", href: appCss },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Studio Inova",
+          url: "https://studio-inova-official.lovable.app",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
