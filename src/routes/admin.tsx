@@ -10,5 +10,12 @@ function Admin() {
 }
 
 export const Route = createFileRoute("/admin")({
+  head: () => ({
+    meta: [
+      { title: "Admin — Studio Inova" },
+      { name: "description", content: "Private admin portal for Studio Inova staff. Authentication required." },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: Admin,
 });
