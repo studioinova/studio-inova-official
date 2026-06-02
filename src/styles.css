@@ -328,3 +328,19 @@
 .detect-ai-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 122, 255, 0.5);
 }
+
+/* Hero background slow pan animation */
+@keyframes hero-pan {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+.hero-bg-pan {
+  background-size: 120% auto;
+  background-position: 0% center;
+  animation: hero-pan 60s linear infinite;
+}

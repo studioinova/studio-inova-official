@@ -10,11 +10,9 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         {/* Blurred background layer */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 hero-bg-pan"
           style={{
             backgroundImage: "url('/hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
             filter: "blur(2px)",
             transform: "scale(1.05)",
           }}
