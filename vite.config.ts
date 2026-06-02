@@ -1,12 +1,15 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
 
-// Vercel deployment target — emits .vercel/output/ for Vercel's Build Output API.
-// No vercel.json required; Vercel auto-detects the output.
+// Vercel deployment via Nitro. Nitro auto-detects Vercel env (VERCEL=1)
+// and emits the Vercel Build Output API format under .vercel/output/.
+// Locally `vite build` produces .output/ which can be previewed with
+// `node .output/server/index.mjs`.
 export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
@@ -15,7 +18,8 @@ export default defineConfig({
   plugins: [
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
-    tanstackStart({ target: "vercel" }),
+    tanstackStart(),
+    nitro(),
     viteReact(),
   ],
 });
