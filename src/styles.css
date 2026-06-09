@@ -329,16 +329,17 @@
   background: rgba(0, 122, 255, 0.5);
 }
 
-/* Hero background seamless infinite pan */
+/* Hero background smooth drifting animation (no tiling, no seams) */
 @keyframes hero-pan {
-  from { background-position: 0 center; }
-  to   { background-position: -1920px center; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-bg-pan {
-  background-repeat: repeat-x;
-  background-size: 1920px auto;
-  background-position: 0 center;
-  animation: hero-pan 20s linear infinite;
+  background-repeat: no-repeat;
+  background-size: 140% auto;
+  background-position: 0% 50%;
+  animation: hero-pan 18s ease-in-out infinite;
   will-change: background-position;
 }
