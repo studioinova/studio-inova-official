@@ -340,6 +340,6 @@
   background-repeat: no-repeat;
   background-size: 140% auto;
   background-position: 0% 50%;
-  animation: hero-pan 18s ease-in-out infinite;
+  animation: hero-pan 20s ease-in-out infinite;
   will-change: background-position;
 }
