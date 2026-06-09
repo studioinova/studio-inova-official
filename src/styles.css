@@ -329,18 +329,16 @@
   background: rgba(0, 122, 255, 0.5);
 }
 
-/* Hero background slow pan animation */
+/* Hero background seamless infinite pan */
 @keyframes hero-pan {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 100% center;
-  }
+  from { background-position: 0 center; }
+  to   { background-position: -1920px center; }
 }
 
 .hero-bg-pan {
-  background-size: 120% auto;
-  background-position: 0% center;
-  animation: hero-pan 12s linear infinite;
+  background-repeat: repeat-x;
+  background-size: 1920px auto;
+  background-position: 0 center;
+  animation: hero-pan 20s linear infinite;
+  will-change: background-position;
 }
