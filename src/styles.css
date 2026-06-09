@@ -342,5 +342,5 @@
 .hero-bg-pan {
   background-size: 120% auto;
   background-position: 0% center;
-  animation: hero-pan 60s linear infinite;
+  animation: hero-pan 12s linear infinite;
 }
