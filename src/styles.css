@@ -338,7 +338,7 @@
 
 .hero-bg-pan {
   background-repeat: no-repeat;
-  background-size: 140% auto;
+  background-size: 250% 100%;
   background-position: 0% 50%;
   animation: hero-pan 20s ease-in-out infinite;
   will-change: background-position;
