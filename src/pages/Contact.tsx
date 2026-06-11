@@ -69,10 +69,7 @@ export default function Contact() {
       const result = await response.json();
 
       if (response.ok && result.success) {
-        toast({
-          title: "Success!",
-          description: "Message sent!",
-        });
+        setSuccessOpen(true);
         form.reset();
       } else {
         toast({
