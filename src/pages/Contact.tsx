@@ -30,6 +30,7 @@ const formSchema = z.object({
 export default function Contact() {
   const { toast } = useToast();
   const [isSending, setIsSending] = useState(false);
+  const [successOpen, setSuccessOpen] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
