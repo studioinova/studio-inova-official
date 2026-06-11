@@ -210,6 +210,31 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      <Dialog open={successOpen} onOpenChange={setSuccessOpen}>
+        <DialogContent className="sm:max-w-md rounded-3xl border-border/40">
+          <div className="flex flex-col items-center text-center pt-2">
+            <img
+              src={noaAsset.url}
+              alt="Noa, Studio Inova mascot"
+              className="w-28 h-28 object-contain drop-shadow-[0_12px_20px_rgba(10,37,64,0.25)] select-none"
+              draggable={false}
+            />
+            <DialogTitle className="mt-4 text-xl font-bold text-foreground">
+              Message Delivered
+            </DialogTitle>
+            <DialogDescription className="mt-2 text-base text-muted-foreground leading-relaxed">
+              Perfect! <span className="font-semibold text-foreground">Noa</span> has safely secured your message. It is now on its way directly to Sajid and the Studio Inova.
+            </DialogDescription>
+            <Button
+              onClick={() => setSuccessOpen(false)}
+              className="mt-6 h-11 px-8 bg-primary text-white font-semibold rounded-xl"
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
