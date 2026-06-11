@@ -343,3 +343,19 @@
   animation: hero-pan 16s ease-in-out infinite;
   will-change: background-position;
 }
+
+/* Subtle animated gradient overlay for depth and dynamism */
+@keyframes hero-gradient-drift {
+  0%   { opacity: 0.25; transform: translate(-8%, -6%) scale(1.15); }
+  50%  { opacity: 0.45; transform: translate(4%, 4%) scale(1.25); }
+  100% { opacity: 0.25; transform: translate(-8%, -6%) scale(1.15); }
+}
+
+.hero-gradient-overlay {
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 70% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+  animation: hero-gradient-drift 20s ease-in-out infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
