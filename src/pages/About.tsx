@@ -11,7 +11,7 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             About Studio Inova
           </h1>
-          <p className="text-xl text-primary font-medium max-w-3xl mx-auto">
+          <p className="text-xl text-black font-medium max-w-3xl mx-auto">
             "We create AI-assisted tools that solve real problems with small,
             calculated steps."
           </p>
