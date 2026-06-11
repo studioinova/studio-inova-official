@@ -19,7 +19,7 @@ export default function Home() {
         />
 
         {/* Subtle animated gradient overlay for depth */}
-        <div className="absolute inset-0 z-[0.5] hero-gradient-overlay" />
+        <div className="absolute inset-0 hero-gradient-overlay" />
 
         {/* White overlay */}
         <div className="absolute inset-0 z-[1]" style={{ background: "rgba(255, 255, 255, 0.4)" }} />
