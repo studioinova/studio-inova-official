@@ -6,10 +6,6 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
 
-// Vercel deployment via Nitro. Nitro auto-detects Vercel env (VERCEL=1)
-// and emits the Vercel Build Output API format under .vercel/output/.
-// Locally `vite build` produces .output/ which can be previewed with
-// `node .output/server/index.mjs`.
 export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
@@ -19,7 +15,7 @@ export default defineConfig({
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),
-    nitro(),
+    nitro({ preset: "cloudflare-pages" }),
     viteReact(),
   ],
 });
