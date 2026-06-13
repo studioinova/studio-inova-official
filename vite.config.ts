@@ -15,7 +15,7 @@ export default defineConfig({
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),
-    nitro({ preset: "cloudflare-pages" }),
+    nitro(),
     viteReact(),
   ],
 });
