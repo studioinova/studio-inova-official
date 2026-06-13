@@ -1,6 +1,0 @@
-{
-  "buildCommand": "vite build",
-  "devCommand": "vite dev",
-  "installCommand": "bun install",
-  "framework": "tanstack-start"
-}
