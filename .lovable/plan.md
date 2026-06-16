@@ -1,8 +1,7 @@
-Make the Noa mascot image have a transparent background everywhere it's used.
+I’ll patch the production build config so Lovable’s dist-check sees the expected TanStack Start output.
 
-Steps:
-1. Run `imagegen--edit_image` on the current Noa image with `transparent_background: true`, saving to `/tmp/noa-mascot-transparent.png`.
-2. Upload via `lovable-assets create` and write the new pointer to `src/assets/noa-mascot.png.asset.json` (overwriting the existing pointer so all consumers — `NoaWidget`, Contact success modal — pick it up automatically).
-3. Delete the old asset from CDN.
-
-No component code changes required since the import path stays the same.
+Plan:
+1. Replace the manual Vite/TanStack/Nitro plugin setup in `vite.config.ts` with the Lovable TanStack config wrapper.
+2. Keep the existing path alias behavior through the wrapper/default config rather than manually ordering plugins.
+3. Leave `package.json` as-is because `@lovable.dev/vite-tanstack-config` is already installed.
+4. After implementation, rely on the platform build check to validate the production output.
