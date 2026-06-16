@@ -12,10 +12,10 @@ export default defineConfig({
     dedupe: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-start"],
   },
   plugins: [
-    tsConfigPaths({ projects: ["./tsconfig.json"] }),
-    tailwindcss(),
     tanstackStart(),
-    nitro(),
     viteReact(),
+    nitro(),
+    tailwindcss(),
+    tsConfigPaths({ projects: ["./tsconfig.json"] }),
   ],
 });
