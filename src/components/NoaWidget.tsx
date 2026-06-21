@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import noaAsset from "@/assets/noa-mascot.png.asset.json";
 
 export default function NoaWidget() {
   const [visible, setVisible] = useState(true);
@@ -23,7 +24,7 @@ export default function NoaWidget() {
         Hey! I'm <span className="font-semibold">Noa</span>. Welcome to Studio Inova—where we create simple solutions and AI-assisted tools for a better tomorrow. ✨
       </div>
       <img
-        src="/na_moscot-Photoroom.png"
+        src={noaAsset.url}
         alt="Noa, Studio Inova mascot"
         className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-[0_12px_20px_rgba(10,37,64,0.25)] select-none"
         draggable={false}
