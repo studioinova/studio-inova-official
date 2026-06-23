@@ -427,7 +427,7 @@ function NotFound() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-sm text-gray-600", children: "Did you forget to add the page to the router?" })
   ] }) }) });
 }
-const appCss = "/assets/styles-Bzfphw4d.css";
+const appCss = "/assets/styles-4oc8VfUA.css";
 function ErrorComponent({ error, reset }) {
   console.error(error);
   const router2 = useRouter();
@@ -594,7 +594,7 @@ const Route$6 = createFileRoute("/sitemap.xml")({
     }
   }
 });
-const $$splitComponentImporter$5 = () => import("./products-cGrEmtUd.mjs");
+const $$splitComponentImporter$5 = () => import("./products-CnqxIgkd.mjs");
 const URL$3 = "https://studio-inova-official.lovable.app/products";
 const TITLE$4 = "Products — Detect AI and AI Learning E-book | Studio Inova";
 const DESCRIPTION$4 = "Explore Studio Inova's products — Detect AI for spotting AI-generated content, and our Zero-to-App AI learning e-book for beginners.";
@@ -690,7 +690,7 @@ const Route$4 = createFileRoute("/privacy-policy")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./contact-DT6fjvxu.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-B_8jeq0B.mjs");
 const URL$1 = "https://studio-inova-official.lovable.app/contact";
 const TITLE$2 = "Contact Studio Inova — Get in Touch";
 const DESCRIPTION$2 = "Get in touch with Studio Inova. Share feedback, suggestions, or project inquiries — we'd love to hear from you.";

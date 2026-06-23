@@ -42,10 +42,10 @@ function DetectAICarousel() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center gap-5 select-none">
 
-      {/* 3D Coverflow stage — tightly cropped, overlapping stack */}
+      {/* 3D Coverflow stage */}
       <div
         className="relative w-full flex items-center justify-center"
-        style={{ perspective: "1400px", height: "380px" }}
+        style={{ perspective: "1400px", height: "420px" }}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -53,11 +53,10 @@ function DetectAICarousel() {
           const offset = getOffset(i);
           const abs = Math.abs(offset);
           const isActive = offset === 0;
-          // Tight overlap — phones stack into each other
-          const translateX = offset * 70;
-          const rotateY = offset * -22;
-          const scale = isActive ? 1.1 : 0.8;
-          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.85 : 0.55;
+          const translateX = offset * 90;
+          const rotateY = offset * -20;
+          const scale = isActive ? 1.0 : 0.75;
+          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.8 : 0.45;
           const zIndex = 10 - abs;
           return (
             <button
@@ -69,7 +68,7 @@ function DetectAICarousel() {
                 transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
                 opacity,
                 zIndex,
-                width: "180px",
+                width: "155px",
                 aspectRatio: "9/19",
                 transformStyle: "preserve-3d",
                 pointerEvents: abs > 2 ? "none" : "auto",
@@ -81,7 +80,7 @@ function DetectAICarousel() {
               <img
                 src={slide.src}
                 alt={slide.alt}
-                className="w-full h-full object-cover rounded-[28px]"
+                className="w-full h-full object-contain rounded-[24px]"
                 draggable={false}
               />
             </button>
@@ -154,7 +153,7 @@ export default function Products() {
         <div className="flex flex-col gap-16">
           {/* Featured Product: Detect AI */}
           <FadeIn>
-            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group">
+            <div className="inova-card border border-border/40 flex flex-col lg:flex-row group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
                 <Badge className="w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
@@ -220,7 +219,7 @@ export default function Products() {
               </div>
 
               {/* Carousel Area */}
-              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border min-h-[400px]">
+              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative border-t lg:border-t-0 lg:border-l border-border min-h-[540px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                   <DetectAICarousel />

@@ -1,8 +1,8 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { F as FadeIn } from "./FadeIn-7xxbsaMm.mjs";
-import { B as Button } from "./button-Bg2ZPLTs.mjs";
+import { B as Button } from "./button-Bd0IYMor.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
-import { c as cn } from "./router-CbgT-tJo.mjs";
+import { c as cn } from "./router-PvYC_L4j.mjs";
 import { a as Check, E as ExternalLink, b as ChevronLeft, c as ChevronRight } from "../_libs/lucide-react.mjs";
 import "../_libs/framer-motion.mjs";
 import "../_libs/motion-dom.mjs";
@@ -101,17 +101,17 @@ function DetectAICarousel() {
       "div",
       {
         className: "relative w-full flex items-center justify-center",
-        style: { perspective: "1400px", height: "380px" },
+        style: { perspective: "1400px", height: "420px" },
         onTouchStart,
         onTouchEnd,
         children: DETECT_AI_SLIDES.map((slide, i) => {
           const offset = getOffset(i);
           const abs = Math.abs(offset);
           const isActive = offset === 0;
-          const translateX = offset * 70;
-          const rotateY = offset * -22;
-          const scale = isActive ? 1.1 : 0.8;
-          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.85 : 0.55;
+          const translateX = offset * 90;
+          const rotateY = offset * -20;
+          const scale = isActive ? 1 : 0.75;
+          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.8 : 0.45;
           const zIndex = 10 - abs;
           return /* @__PURE__ */ jsxRuntimeExports.jsx(
             "button",
@@ -123,7 +123,7 @@ function DetectAICarousel() {
                 transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
                 opacity,
                 zIndex,
-                width: "180px",
+                width: "155px",
                 aspectRatio: "9/19",
                 transformStyle: "preserve-3d",
                 pointerEvents: abs > 2 ? "none" : "auto",
@@ -134,7 +134,7 @@ function DetectAICarousel() {
                 {
                   src: slide.src,
                   alt: slide.alt,
-                  className: "w-full h-full object-cover rounded-[28px]",
+                  className: "w-full h-full object-contain rounded-[24px]",
                   draggable: false
                 }
               )
@@ -197,7 +197,7 @@ function Products() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-muted-foreground max-w-2xl mx-auto", children: "Tools engineered for clarity, accuracy, and long-term trust." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { className: "text-center mb-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-bold tracking-tight", children: "Our Apps" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inova-card border border-border/40 flex flex-col lg:flex-row group", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-8 md:p-12 lg:w-1/2 flex flex-col justify-center", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { className: "w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" }),
@@ -269,7 +269,7 @@ function Products() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "ml-2 w-4 h-4" })
         ] }) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border min-h-[400px]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative border-t lg:border-t-0 lg:border-l border-border min-h-[540px]", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative z-10 w-full h-full flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(DetectAICarousel, {}) })
       ] })
