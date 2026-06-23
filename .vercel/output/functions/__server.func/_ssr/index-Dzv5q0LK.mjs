@@ -1,7 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
 import { F as FadeIn } from "./FadeIn-7xxbsaMm.mjs";
-import { n as noaAsset } from "./noa-mascot.png.asset-imWt9YJb.mjs";
 import { f as CircleCheck, Z as Zap, g as Compass, h as Smartphone, i as Cpu, G as GraduationCap, j as Search, P as Paintbrush, k as CodeXml, R as Rocket } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
@@ -41,7 +40,7 @@ function NoaWidget() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "img",
           {
-            src: noaAsset.url,
+            src: "/noa_with_bg-removebg-preview.png",
             alt: "Noa, Studio Inova mascot",
             className: "w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-[0_12px_20px_rgba(10,37,64,0.25)] select-none",
             draggable: false

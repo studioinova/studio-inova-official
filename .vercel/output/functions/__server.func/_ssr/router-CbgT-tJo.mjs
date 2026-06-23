@@ -594,7 +594,7 @@ const Route$6 = createFileRoute("/sitemap.xml")({
     }
   }
 });
-const $$splitComponentImporter$5 = () => import("./products-W5Ayos3f.mjs");
+const $$splitComponentImporter$5 = () => import("./products-cGrEmtUd.mjs");
 const URL$3 = "https://studio-inova-official.lovable.app/products";
 const TITLE$4 = "Products — Detect AI and AI Learning E-book | Studio Inova";
 const DESCRIPTION$4 = "Explore Studio Inova's products — Detect AI for spotting AI-generated content, and our Zero-to-App AI learning e-book for beginners.";
@@ -690,7 +690,7 @@ const Route$4 = createFileRoute("/privacy-policy")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./contact-DU-mZ7YN.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-DT6fjvxu.mjs");
 const URL$1 = "https://studio-inova-official.lovable.app/contact";
 const TITLE$2 = "Contact Studio Inova — Get in Touch";
 const DESCRIPTION$2 = "Get in touch with Studio Inova. Share feedback, suggestions, or project inquiries — we'd love to hear from you.";
@@ -779,7 +779,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-g7LPoiqz.mjs");
+const $$splitComponentImporter = () => import("./index-Dzv5q0LK.mjs");
 const SITE_URL = "https://studio-inova-official.lovable.app";
 const TITLE = "Studio Inova — Minimalist AI Tools and Apps";
 const DESCRIPTION = "Studio Inova is a digital studio building minimalist, high-impact AI tools, apps, and clean digital experiences for creators and modern teams.";
