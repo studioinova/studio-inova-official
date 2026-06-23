@@ -238,82 +238,8 @@ export default function Products() {
 
           <div className="flex flex-col gap-6">
 
-            {/* ── Card 1: Zero Knowledge to App Builder — Featured Full-Width Horizontal ── */}
+            {/* ── Card: The Art of Prompt Engineering ── */}
             <FadeIn delay={0.1}>
-              <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-md">
-                <div className="flex flex-col md:flex-row">
-
-                  {/* Left: Book cover */}
-                  <div className="md:w-64 lg:w-72 shrink-0 flex items-center justify-center p-8 md:py-10 md:pl-10 md:pr-6">
-                    <div
-                      className="relative w-44 md:w-full"
-                      style={{
-                        filter: "drop-shadow(-8px 14px 28px rgba(0,0,0,0.32)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
-                        transform: "perspective(700px) rotateY(8deg) rotateX(2deg)",
-                        transition: "transform 0.4s ease",
-                      }}
-                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(0deg) rotateX(0deg)")}
-                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(8deg) rotateX(2deg)")}
-                    >
-                      <img src="/ebook-cover.jpg" alt="Zero Knowledge to App Builder" className="w-full rounded-xl" style={{ display: "block" }} />
-                      <div className="absolute top-0 left-0 w-2.5 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)" }} />
-                    </div>
-                  </div>
-
-                  {/* Right: Text */}
-                  <div className="flex-1 flex flex-col justify-center p-8 md:py-10 md:pl-4 md:pr-10 relative">
-
-                    {/* Buy Now badge */}
-                    <div className="absolute top-5 right-5">
-                      <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "#007AFF", color: "#fff", letterSpacing: "0.04em" }}>
-                        Buy Now
-                      </span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
-                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
-                    </div>
-
-                    <h3 className="text-2xl md:text-3xl font-bold mb-1">Zero Knowledge to App Builder</h3>
-                    <p className="text-sm mb-5" style={{ color: "#007AFF" }}>How anyone can build apps using AI — without coding.</p>
-
-                    <div className="detect-ai-scroll mb-6 pr-2 text-sm leading-relaxed space-y-3" style={{ height: "150px", overflowY: "auto" }}>
-                      <div>
-                        <span className="font-bold" style={{ color: "#007AFF" }}>The Goal — </span>
-                        <span className="text-muted-foreground">This book is designed to change your mindset. Learn how to turn ideas into real applications using the power of AI.</span>
-                      </div>
-                      <div>
-                        <span className="font-bold" style={{ color: "#007AFF" }}>What You Will Learn — </span>
-                      </div>
-                      <ul className="space-y-2 pl-1">
-                        {[
-                          "The Zero Knowledge Mindset.",
-                          "Essential AI tools for building without code.",
-                          "Planning your first app, screens, and flows.",
-                          "Fixing errors and moving from prototype to a real app.",
-                        ].map((item, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-muted-foreground">
-                            <div className="mt-0.5 w-4 h-4 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
-                              <Check className="w-2.5 h-2.5" style={{ color: "#007AFF" }} />
-                            </div>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-muted-foreground text-xs pt-1">By Studio Inova · 2026</p>
-                    </div>
-
-                    <Button className="rounded-full px-8 w-fit" style={{ background: "#007AFF", color: "#fff" }}>
-                      Get the E-book
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* ── Card 2: The Art of Prompt Engineering ── */}
-            <FadeIn delay={0.2}>
               <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-sm">
                 <div className="flex flex-col md:flex-row">
 
