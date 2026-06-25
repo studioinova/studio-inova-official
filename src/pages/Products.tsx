@@ -13,7 +13,6 @@ const DETECT_AI_SLIDES = [
 ];
 
 function DetectAICarousel() {
-  // Start with the "Scan History" slide active (center index = 2)
   const [current, setCurrent] = useState(2);
   const touchStartX = useRef<number | null>(null);
   const total = DETECT_AI_SLIDES.length;
@@ -32,88 +31,89 @@ function DetectAICarousel() {
     touchStartX.current = null;
   };
 
-  const getOffset = (i: number) => {
-    let diff = i - current;
-    if (diff > total / 2) diff -= total;
-    if (diff < -total / 2) diff += total;
-    return diff;
-  };
+  const prevIdx = (current - 1 + total) % total;
+  const nextIdx = (current + 1) % total;
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center gap-5 select-none">
+    <div
+      className="w-full flex flex-col items-center gap-6 select-none"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
+      {/* Slide stage: prev | active | next */}
+      <div className="flex items-center justify-center gap-4 w-full">
 
-      {/* 3D Coverflow stage */}
-      <div
-        className="relative w-full flex items-center justify-center"
-        style={{ perspective: "1400px", height: "420px" }}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
-        {DETECT_AI_SLIDES.map((slide, i) => {
-          const offset = getOffset(i);
-          const abs = Math.abs(offset);
-          const isActive = offset === 0;
-          const translateX = offset * 90;
-          const rotateY = offset * -20;
-          const scale = isActive ? 1.0 : 0.75;
-          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.8 : 0.45;
-          const zIndex = 10 - abs;
-          return (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              aria-label={slide.label}
-              className="absolute top-1/2 left-1/2 transition-all duration-500 ease-out focus:outline-none"
-              style={{
-                transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
-                opacity,
-                zIndex,
-                width: "155px",
-                aspectRatio: "9/19",
-                transformStyle: "preserve-3d",
-                pointerEvents: abs > 2 ? "none" : "auto",
-                filter: isActive
-                  ? "drop-shadow(0 20px 30px rgba(0,122,255,0.28))"
-                  : "drop-shadow(0 10px 18px rgba(0,0,0,0.18))",
-              }}
-            >
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="w-full h-full object-contain rounded-[24px]"
-                draggable={false}
-              />
-            </button>
-          );
-        })}
+        {/* Prev slide */}
+        <button
+          onClick={prev}
+          aria-label="Previous slide"
+          className="shrink-0 transition-all duration-400 ease-out opacity-45 hover:opacity-65 focus:outline-none"
+        >
+          <div className="w-[88px] aspect-[9/19] max-h-[260px]">
+            <img
+              src={DETECT_AI_SLIDES[prevIdx].src}
+              alt={DETECT_AI_SLIDES[prevIdx].label}
+              className="w-full h-full object-contain rounded-[20px]"
+              style={{ filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.18))" }}
+              draggable={false}
+            />
+          </div>
+        </button>
+
+        {/* Active slide */}
+        <div className="shrink-0 transition-all duration-400 ease-out">
+          <div className="w-[165px] aspect-[9/19] max-h-[420px]">
+            <img
+              src={DETECT_AI_SLIDES[current].src}
+              alt={DETECT_AI_SLIDES[current].label}
+              className="w-full h-full object-contain rounded-[28px]"
+              style={{ filter: "drop-shadow(0 20px 40px rgba(0,122,255,0.30))" }}
+              draggable={false}
+            />
+          </div>
+        </div>
+
+        {/* Next slide */}
+        <button
+          onClick={next}
+          aria-label="Next slide"
+          className="shrink-0 transition-all duration-400 ease-out opacity-45 hover:opacity-65 focus:outline-none"
+        >
+          <div className="w-[88px] aspect-[9/19] max-h-[260px]">
+            <img
+              src={DETECT_AI_SLIDES[nextIdx].src}
+              alt={DETECT_AI_SLIDES[nextIdx].label}
+              className="w-full h-full object-contain rounded-[20px]"
+              style={{ filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.18))" }}
+              draggable={false}
+            />
+          </div>
+        </button>
       </div>
 
       {/* Active label */}
-      <p className="text-sm font-semibold tracking-wide -mt-1" style={{ color: "#007AFF" }}>
+      <p className="text-sm font-semibold tracking-wide" style={{ color: "#007AFF" }}>
         {DETECT_AI_SLIDES[current].label}
       </p>
 
-      {/* Pager dots — 4 dots + 1 active bar */}
+      {/* Dot indicators */}
       <div className="flex items-center gap-2">
-        {DETECT_AI_SLIDES.map((_, i) => {
-          const active = i === current;
-          return (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className="rounded-full transition-all duration-300"
-              style={{
-                width: active ? "22px" : "8px",
-                height: "8px",
-                background: active ? "#007AFF" : "rgba(0,122,255,0.28)",
-              }}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          );
-        })}
+        {DETECT_AI_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className="rounded-full transition-all duration-300"
+            style={{
+              width: i === current ? "22px" : "8px",
+              height: "8px",
+              background: i === current ? "#007AFF" : "rgba(0,122,255,0.28)",
+            }}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
       </div>
 
-      {/* PREV / NEXT */}
+      {/* PREV / NEXT buttons */}
       <div className="flex items-center gap-3">
         <button
           onClick={prev}
@@ -153,7 +153,7 @@ export default function Products() {
         <div className="flex flex-col gap-16">
           {/* Featured Product: Detect AI */}
           <FadeIn>
-            <div className="inova-card border border-border/40 flex flex-col lg:flex-row group">
+            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
                 <Badge className="w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
@@ -219,7 +219,7 @@ export default function Products() {
               </div>
 
               {/* Carousel Area */}
-              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative border-t lg:border-t-0 lg:border-l border-border min-h-[540px]">
+              <div className="lg:w-1/2 bg-slate-50 px-6 py-10 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border min-h-[500px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                   <DetectAICarousel />

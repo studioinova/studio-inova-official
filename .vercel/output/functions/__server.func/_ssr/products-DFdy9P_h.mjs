@@ -1,8 +1,8 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { F as FadeIn } from "./FadeIn-7xxbsaMm.mjs";
-import { B as Button } from "./button-Bd0IYMor.mjs";
+import { B as Button } from "./button-CgwAQq9n.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
-import { c as cn } from "./router-PvYC_L4j.mjs";
+import { c as cn } from "./router-BfJ3hk1m.mjs";
 import { a as Check, E as ExternalLink, b as ChevronLeft, c as ChevronRight } from "../_libs/lucide-react.mjs";
 import "../_libs/framer-motion.mjs";
 import "../_libs/motion-dom.mjs";
@@ -90,105 +90,107 @@ function DetectAICarousel() {
     else if (diff < -40) prev();
     touchStartX.current = null;
   };
-  const getOffset = (i) => {
-    let diff = i - current;
-    if (diff > total / 2) diff -= total;
-    if (diff < -total / 2) diff += total;
-    return diff;
-  };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-full flex flex-col items-center justify-center gap-5 select-none", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
-      {
-        className: "relative w-full flex items-center justify-center",
-        style: { perspective: "1400px", height: "420px" },
-        onTouchStart,
-        onTouchEnd,
-        children: DETECT_AI_SLIDES.map((slide, i) => {
-          const offset = getOffset(i);
-          const abs = Math.abs(offset);
-          const isActive = offset === 0;
-          const translateX = offset * 90;
-          const rotateY = offset * -20;
-          const scale = isActive ? 1 : 0.75;
-          const opacity = abs > 2 ? 0 : isActive ? 1 : abs === 1 ? 0.8 : 0.45;
-          const zIndex = 10 - abs;
-          return /* @__PURE__ */ jsxRuntimeExports.jsx(
+  const prevIdx = (current - 1 + total) % total;
+  const nextIdx = (current + 1) % total;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "div",
+    {
+      className: "w-full flex flex-col items-center gap-6 select-none",
+      onTouchStart,
+      onTouchEnd,
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-4 w-full", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
             "button",
             {
-              onClick: () => setCurrent(i),
-              "aria-label": slide.label,
-              className: "absolute top-1/2 left-1/2 transition-all duration-500 ease-out focus:outline-none",
-              style: {
-                transform: `translate(-50%, -50%) translateX(${translateX}px) rotateY(${rotateY}deg) scale(${scale})`,
-                opacity,
-                zIndex,
-                width: "155px",
-                aspectRatio: "9/19",
-                transformStyle: "preserve-3d",
-                pointerEvents: abs > 2 ? "none" : "auto",
-                filter: isActive ? "drop-shadow(0 20px 30px rgba(0,122,255,0.28))" : "drop-shadow(0 10px 18px rgba(0,0,0,0.18))"
-              },
-              children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              onClick: prev,
+              "aria-label": "Previous slide",
+              className: "shrink-0 transition-all duration-400 ease-out opacity-45 hover:opacity-65 focus:outline-none",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-[88px] aspect-[9/19] max-h-[260px]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "img",
                 {
-                  src: slide.src,
-                  alt: slide.alt,
-                  className: "w-full h-full object-contain rounded-[24px]",
+                  src: DETECT_AI_SLIDES[prevIdx].src,
+                  alt: DETECT_AI_SLIDES[prevIdx].label,
+                  className: "w-full h-full object-contain rounded-[20px]",
+                  style: { filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.18))" },
                   draggable: false
                 }
-              )
+              ) })
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "shrink-0 transition-all duration-400 ease-out", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-[165px] aspect-[9/19] max-h-[420px]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: DETECT_AI_SLIDES[current].src,
+              alt: DETECT_AI_SLIDES[current].label,
+              className: "w-full h-full object-contain rounded-[28px]",
+              style: { filter: "drop-shadow(0 20px 40px rgba(0,122,255,0.30))" },
+              draggable: false
+            }
+          ) }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "button",
+            {
+              onClick: next,
+              "aria-label": "Next slide",
+              className: "shrink-0 transition-all duration-400 ease-out opacity-45 hover:opacity-65 focus:outline-none",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-[88px] aspect-[9/19] max-h-[260px]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: DETECT_AI_SLIDES[nextIdx].src,
+                  alt: DETECT_AI_SLIDES[nextIdx].label,
+                  className: "w-full h-full object-contain rounded-[20px]",
+                  style: { filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.18))" },
+                  draggable: false
+                }
+              ) })
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold tracking-wide", style: { color: "#007AFF" }, children: DETECT_AI_SLIDES[current].label }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: DETECT_AI_SLIDES.map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            onClick: () => setCurrent(i),
+            className: "rounded-full transition-all duration-300",
+            style: {
+              width: i === current ? "22px" : "8px",
+              height: "8px",
+              background: i === current ? "#007AFF" : "rgba(0,122,255,0.28)"
             },
-            i
-          );
-        })
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold tracking-wide -mt-1", style: { color: "#007AFF" }, children: DETECT_AI_SLIDES[current].label }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: DETECT_AI_SLIDES.map((_, i) => {
-      const active = i === current;
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "button",
-        {
-          onClick: () => setCurrent(i),
-          className: "rounded-full transition-all duration-300",
-          style: {
-            width: active ? "22px" : "8px",
-            height: "8px",
-            background: active ? "#007AFF" : "rgba(0,122,255,0.28)"
+            "aria-label": `Go to slide ${i + 1}`
           },
-          "aria-label": `Go to slide ${i + 1}`
-        },
-        i
-      );
-    }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "button",
-        {
-          onClick: prev,
-          className: "flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] border transition-all hover:scale-105",
-          style: { borderColor: "rgba(0,122,255,0.4)", color: "#007AFF", background: "rgba(0,122,255,0.06)" },
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronLeft, { className: "w-3.5 h-3.5" }),
-            " PREV"
-          ]
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "button",
-        {
-          onClick: next,
-          className: "flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] text-white transition-all hover:scale-105",
-          style: { background: "#007AFF" },
-          children: [
-            "NEXT ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronRight, { className: "w-3.5 h-3.5" })
-          ]
-        }
-      )
-    ] })
-  ] });
+          i
+        )) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: prev,
+              className: "flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] border transition-all hover:scale-105",
+              style: { borderColor: "rgba(0,122,255,0.4)", color: "#007AFF", background: "rgba(0,122,255,0.06)" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronLeft, { className: "w-3.5 h-3.5" }),
+                " PREV"
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: next,
+              className: "flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold tracking-[0.15em] text-white transition-all hover:scale-105",
+              style: { background: "#007AFF" },
+              children: [
+                "NEXT ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronRight, { className: "w-3.5 h-3.5" })
+              ]
+            }
+          )
+        ] })
+      ]
+    }
+  );
 }
 function Products() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col min-h-screen bg-secondary/30 pt-32 pb-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full", children: [
@@ -197,7 +199,7 @@ function Products() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-muted-foreground max-w-2xl mx-auto", children: "Tools engineered for clarity, accuracy, and long-term trust." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { className: "text-center mb-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-bold tracking-tight", children: "Our Apps" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inova-card border border-border/40 flex flex-col lg:flex-row group", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FadeIn, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-8 md:p-12 lg:w-1/2 flex flex-col justify-center", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(Badge, { className: "w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" }),
@@ -269,7 +271,7 @@ function Products() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "ml-2 w-4 h-4" })
         ] }) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative border-t lg:border-t-0 lg:border-l border-border min-h-[540px]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2 bg-slate-50 px-6 py-10 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border min-h-[500px]", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative z-10 w-full h-full flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(DetectAICarousel, {}) })
       ] })
