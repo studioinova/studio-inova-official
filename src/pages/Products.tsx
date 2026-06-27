@@ -5,11 +5,11 @@ import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-2.png", alt: "Initial Input", label: "Initial Input" },
+  { src: "/detect-ai-slide-1.png", alt: "Home Screen", label: "Home Screen" },
+  { src: "/detect-ai-slide-2.png", alt: "Text Scan", label: "Text Scan" },
   { src: "/detect-ai-slide-3.png", alt: "Scanning", label: "Scanning" },
-  { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" },
   { src: "/detect-ai-slide-4.png", alt: "Results", label: "Results" },
-  { src: "/detect-ai-slide-1.png", alt: "Secondary Input", label: "Secondary Input" },
+  { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" },
 ];
 
 function DetectAICarousel() {

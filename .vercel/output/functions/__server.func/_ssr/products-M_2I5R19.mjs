@@ -1,8 +1,8 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { F as FadeIn } from "./FadeIn-7xxbsaMm.mjs";
-import { B as Button } from "./button-Bd0IYMor.mjs";
+import { B as Button } from "./button-BHqCs4D3.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
-import { c as cn } from "./router-PvYC_L4j.mjs";
+import { c as cn } from "./router-Dybk2MjF.mjs";
 import { a as Check, E as ExternalLink, b as ChevronLeft, c as ChevronRight } from "../_libs/lucide-react.mjs";
 import "../_libs/framer-motion.mjs";
 import "../_libs/motion-dom.mjs";
@@ -68,11 +68,11 @@ function Badge({ className, variant, ...props }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: cn(badgeVariants({ variant }), className), ...props });
 }
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-2.png", alt: "Initial Input", label: "Initial Input" },
+  { src: "/detect-ai-slide-1.png", alt: "Home Screen", label: "Home Screen" },
+  { src: "/detect-ai-slide-2.png", alt: "Text Scan", label: "Text Scan" },
   { src: "/detect-ai-slide-3.png", alt: "Scanning", label: "Scanning" },
-  { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" },
   { src: "/detect-ai-slide-4.png", alt: "Results", label: "Results" },
-  { src: "/detect-ai-slide-1.png", alt: "Secondary Input", label: "Secondary Input" }
+  { src: "/detect-ai-slide-5.png", alt: "Scan History", label: "Scan History" }
 ];
 function DetectAICarousel() {
   const [current, setCurrent] = reactExports.useState(2);
