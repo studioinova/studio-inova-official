@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 interface FadeInProps {
@@ -16,6 +16,12 @@ export function FadeIn({
   fullWidth = false,
   className,
 }: FadeInProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const directions = {
     up: { y: 30, x: 0 },
     down: { y: -30, x: 0 },
@@ -23,6 +29,12 @@ export function FadeIn({
     right: { x: -30, y: 0 },
     none: { x: 0, y: 0 },
   };
+
+  const cls = fullWidth ? `w-full ${className || ""}` : className;
+
+  if (!isMounted) {
+    return <div className={cls}>{children}</div>;
+  }
 
   return (
     <motion.div
@@ -41,7 +53,7 @@ export function FadeIn({
         delay: delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}
-      className={fullWidth ? `w-full ${className || ""}` : className}
+      className={cls}
     >
       {children}
     </motion.div>
