@@ -5,12 +5,12 @@ import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
-  { src: "/detect-ai-slide-1.png", alt: "Check Content Fast", label: "Check Content Fast" },
-  { src: "/detect-ai-slide-2.png", alt: "Spot AI Text", label: "Spot AI Text" },
-  { src: "/detect-ai-slide-3.png", alt: "AI Text Detector", label: "AI Text Detector" },
-  { src: "/detect-ai-slide-4.png", alt: "Verify Images Clearly", label: "Verify Images Clearly" },
-  { src: "/detect-ai-slide-5.png", alt: "Review Videos Easily", label: "Review Videos Easily" },
-  { src: "/detect-ai-slide-6.png", alt: "See Scan History", label: "See Scan History" },
+  { src: "/detect-ai-slide-1.png?v=2", alt: "Check Content Fast", label: "Check Content Fast" },
+  { src: "/detect-ai-slide-2.png?v=2", alt: "Spot AI Text", label: "Spot AI Text" },
+  { src: "/detect-ai-slide-3.png?v=2", alt: "AI Text Detector", label: "AI Text Detector" },
+  { src: "/detect-ai-slide-4.png?v=2", alt: "Verify Images Clearly", label: "Verify Images Clearly" },
+  { src: "/detect-ai-slide-5.png?v=2", alt: "Review Videos Easily", label: "Review Videos Easily" },
+  { src: "/detect-ai-slide-6.png?v=2", alt: "See Scan History", label: "See Scan History" },
 ];
 
 function DetectAICarousel() {
