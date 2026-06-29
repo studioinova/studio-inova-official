@@ -238,59 +238,86 @@ export default function Products() {
 
           <div className="flex flex-col gap-6">
 
-            {/* ── Card: The Art of Prompt Engineering ── */}
+            {/* ── Card: The Art of Prompting ── */}
             <FadeIn delay={0.1}>
               <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-sm">
                 <div className="flex flex-col md:flex-row">
 
-                  {/* Left: Placeholder cover */}
-                  <div className="md:w-52 lg:w-60 shrink-0 flex items-center justify-center p-7 md:py-8 md:pl-8 md:pr-5">
+                  {/* Left: Book cover */}
+                  <div className="md:w-64 lg:w-72 shrink-0 flex items-center justify-center p-8 md:py-10 md:pl-10 md:pr-6 bg-[#F8F9FA]">
                     <div
-                      className="relative w-36 md:w-full"
+                      className="relative w-44 md:w-full"
                       style={{
-                        filter: "drop-shadow(-6px 10px 22px rgba(0,0,0,0.35)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
+                        filter: "drop-shadow(-8px 14px 28px rgba(0,0,0,0.45)) drop-shadow(3px 3px 0px rgba(0,0,0,0.25))",
                         transform: "perspective(700px) rotateY(-8deg) rotateX(2deg)",
                         transition: "transform 0.4s ease",
                       }}
                       onMouseEnter={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(0deg) rotateX(0deg)")}
                       onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(-8deg) rotateX(2deg)")}
                     >
-                      <div className="w-full rounded-xl overflow-hidden flex items-center justify-center" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 55%, #081020 100%)" }}>
-                        <span className="text-white font-bold text-xl tracking-wide select-none">Coming Soon</span>
-                      </div>
-                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.12), transparent)" }} />
+                      <img
+                        src="/ebook-art-of-prompting.jpg"
+                        alt="The Art of Prompting — by Studio Inova"
+                        className="w-full rounded-xl object-cover select-none"
+                        style={{ aspectRatio: "2/3" }}
+                        draggable={false}
+                      />
+                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.08), transparent)" }} />
                     </div>
                   </div>
 
                   {/* Right: Text */}
-                  <div className="flex-1 flex flex-col justify-center p-7 md:py-8 md:pl-4 md:pr-8 relative">
+                  <div className="flex-1 flex flex-col justify-center p-7 md:py-10 md:pl-6 md:pr-10 relative">
 
-                    {/* Coming Soon badge */}
+                    {/* Live badge */}
                     <div className="absolute top-5 right-5">
                       <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF", letterSpacing: "0.04em", border: "1px solid rgba(0,122,255,0.25)" }}>
-                        Coming Soon
+                        Available Now
                       </span>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mb-3">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>Studio Inova</Badge>
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-bold mb-1">The Art of Prompt Engineering</h3>
-                    <p className="text-sm mb-4" style={{ color: "#007AFF" }}>Master the language of AI to get professional results.</p>
+                    <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-1 uppercase">The Art of Prompting</h3>
+                    <p className="text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#007AFF" }}>
+                      A Practical Guide to Getting Better Results from AI
+                    </p>
 
-                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed" style={{ height: "130px", overflowY: "auto" }}>
-                      <span className="text-muted-foreground">Learn how to communicate with AI like a pro. This guide will teach you how to write perfect prompts for coding, designing, and business automation. Unlock the full potential of every AI tool you use — from writing to development to creative work.</span>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-lg">
+                      Master the skill of communicating with AI. Learn the <strong className="text-foreground">C.L.E.A.R. framework</strong>, core prompting techniques, and how to direct reasoning models and AI agents to get extraordinary results — regardless of your technical background.
+                    </p>
+
+                    <ul className="space-y-2 mb-7">
+                      {[
+                        "The C.L.E.A.R. framework for structured, high-quality prompts",
+                        "Core techniques used by AI power users and researchers",
+                        "How to direct reasoning models & autonomous AI agents",
+                        "Real-world examples across writing, coding, and business",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start text-sm text-foreground font-medium">
+                          <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.12)" }}>
+                            <Check className="w-3 h-3" style={{ color: "#007AFF" }} />
+                          </div>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        className="rounded-full px-8 font-semibold hover:scale-105 transition-transform"
+                        style={{ background: "#007AFF", color: "#fff" }}
+                        asChild
+                      >
+                        <a href="https://studioinova.gumroad.com/l/the-art-of-prompting" target="_blank" rel="noopener noreferrer">
+                          Get the Ebook <ExternalLink className="ml-2 w-4 h-4" />
+                        </a>
+                      </Button>
                     </div>
-
-                    <Button
-                      className="rounded-full px-8 w-fit"
-                      style={{ background: "rgba(0,122,255,0.55)", color: "#fff", cursor: "not-allowed" }}
-                      disabled
-                    >
-                      Notify Me
-                    </Button>
                   </div>
                 </div>
               </div>

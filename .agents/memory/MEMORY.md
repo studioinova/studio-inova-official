@@ -1,0 +1,1 @@
+- [Framer Motion SSR fix](framer-motion-ssr.md) — Use LazyMotion+m components in TanStack Start/React 19; resolve.dedupe alone is insufficient.
