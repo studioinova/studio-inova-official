@@ -270,7 +270,7 @@ export default function Products() {
 
                     {/* Live badge */}
                     <div className="absolute top-5 right-5">
-                      <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "rgba(14,165,233,0.1)", color: "#0EA5E9", letterSpacing: "0.04em", border: "1px solid rgba(14,165,233,0.25)" }}>
+                      <span className="text-[11px] font-bold px-3 py-1 rounded-full text-[#007aff]" style={{ background: "rgba(14,165,233,0.1)", letterSpacing: "0.04em", border: "1px solid rgba(14,165,233,0.25)" }}>
                         Available Now
                       </span>
                     </div>
