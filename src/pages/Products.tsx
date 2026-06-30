@@ -276,7 +276,7 @@ export default function Products() {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge className="border-0" style={{ background: "rgba(14,165,233,0.1)", color: "#0EA5E9" }}>E-book</Badge>
+                      <Badge className="border-0 text-[#007aff]" style={{ background: "rgba(14,165,233,0.1)" }}>E-book</Badge>
                       <Badge className="border-0" style={{ background: "rgba(0,0,0,0.05)", color: "#555" }}>Studio Inova</Badge>
                       <Badge className="border-0" style={{ background: "rgba(0,0,0,0.05)", color: "#555" }}>2026</Badge>
                     </div>
