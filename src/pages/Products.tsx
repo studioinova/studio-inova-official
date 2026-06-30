@@ -282,7 +282,7 @@ export default function Products() {
                     </div>
 
                     <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-1 uppercase text-gray-900">The Art of Prompting</h3>
-                    <p className="text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#0EA5E9" }}>
+                    <p className="text-sm font-semibold uppercase tracking-widest mb-5 text-[#007aff]">
                       A Practical Guide to Getting Better Results from AI
                     </p>
 
