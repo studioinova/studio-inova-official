@@ -240,15 +240,15 @@ export default function Products() {
 
             {/* ── Card: The Art of Prompting ── */}
             <FadeIn delay={0.1}>
-              <div className="overflow-hidden rounded-2xl border border-white/10" style={{ background: "#121212" }}>
+              <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-sm">
                 <div className="flex flex-col md:flex-row">
 
                   {/* Left: Book cover */}
-                  <div className="md:w-64 lg:w-72 shrink-0 flex items-center justify-center p-8 md:py-10 md:pl-10 md:pr-6" style={{ background: "#0a0a0a" }}>
+                  <div className="md:w-64 lg:w-72 shrink-0 flex items-center justify-center p-8 md:py-10 md:pl-10 md:pr-6 bg-[#F0F9FF]">
                     <div
                       className="relative w-44 md:w-full"
                       style={{
-                        filter: "drop-shadow(-8px 14px 32px rgba(0,0,0,0.7)) drop-shadow(3px 3px 0px rgba(0,0,0,0.4))",
+                        filter: "drop-shadow(-8px 14px 28px rgba(0,0,0,0.18)) drop-shadow(3px 3px 0px rgba(0,0,0,0.10))",
                         transform: "perspective(700px) rotateY(-8deg) rotateX(2deg)",
                         transition: "transform 0.4s ease",
                       }}
@@ -261,7 +261,7 @@ export default function Products() {
                         className="w-full rounded-xl object-contain select-none"
                         draggable={false}
                       />
-                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.06), transparent)" }} />
+                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.08), transparent)" }} />
                     </div>
                   </div>
 
@@ -270,24 +270,24 @@ export default function Products() {
 
                     {/* Live badge */}
                     <div className="absolute top-5 right-5">
-                      <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "rgba(0,122,255,0.18)", color: "#60AAFF", letterSpacing: "0.04em", border: "1px solid rgba(0,122,255,0.35)" }}>
+                      <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "rgba(14,165,233,0.1)", color: "#0EA5E9", letterSpacing: "0.04em", border: "1px solid rgba(14,165,233,0.25)" }}>
                         Available Now
                       </span>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.18)", color: "#60AAFF" }}>E-book</Badge>
-                      <Badge className="border-0" style={{ background: "rgba(255,255,255,0.08)", color: "#aaa" }}>Studio Inova</Badge>
-                      <Badge className="border-0" style={{ background: "rgba(255,255,255,0.08)", color: "#aaa" }}>2026</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(14,165,233,0.1)", color: "#0EA5E9" }}>E-book</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(0,0,0,0.05)", color: "#555" }}>Studio Inova</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(0,0,0,0.05)", color: "#555" }}>2026</Badge>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-1 uppercase" style={{ color: "#ffffff" }}>The Art of Prompting</h3>
-                    <p className="text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#60AAFF" }}>
+                    <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-1 uppercase text-gray-900">The Art of Prompting</h3>
+                    <p className="text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#0EA5E9" }}>
                       A Practical Guide to Getting Better Results from AI
                     </p>
 
-                    <p className="text-sm leading-relaxed mb-4 max-w-lg" style={{ color: "rgba(255,255,255,0.6)" }}>
-                      Master the skill of communicating with AI. Learn the <strong style={{ color: "rgba(255,255,255,0.9)" }}>C.L.E.A.R. framework</strong>, core prompting techniques, and how to direct reasoning models and AI agents to get extraordinary results — regardless of your technical background.
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4 max-w-lg">
+                      Master the skill of communicating with AI. Learn the <strong className="text-gray-900">C.L.E.A.R. framework</strong>, core prompting techniques, and how to direct reasoning models and AI agents to get extraordinary results — regardless of your technical background.
                     </p>
 
                     <ul className="space-y-2 mb-7">
@@ -297,9 +297,9 @@ export default function Products() {
                         "How to direct reasoning models & autonomous AI agents",
                         "Real-world examples across writing, coding, and business",
                       ].map((item, i) => (
-                        <li key={i} className="flex items-start text-sm font-medium" style={{ color: "rgba(255,255,255,0.8)" }}>
-                          <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.22)" }}>
-                            <Check className="w-3 h-3" style={{ color: "#60AAFF" }} />
+                        <li key={i} className="flex items-start text-sm text-gray-700 font-medium">
+                          <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(14,165,233,0.12)" }}>
+                            <Check className="w-3 h-3" style={{ color: "#0EA5E9" }} />
                           </div>
                           {item}
                         </li>
@@ -309,7 +309,7 @@ export default function Products() {
                     <div className="flex flex-wrap gap-3">
                       <Button
                         className="rounded-full px-8 font-semibold hover:scale-105 transition-transform"
-                        style={{ background: "#007AFF", color: "#fff" }}
+                        style={{ background: "#0EA5E9", color: "#fff" }}
                         asChild
                       >
                         <a href="https://studioinova.gumroad.com/l/the-art-of-prompting" target="_blank" rel="noopener noreferrer">
