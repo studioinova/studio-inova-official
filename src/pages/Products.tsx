@@ -308,8 +308,8 @@ export default function Products() {
 
                     <div className="flex flex-wrap gap-3">
                       <Button
-                        className="rounded-full px-8 font-semibold hover:scale-105 transition-transform"
-                        style={{ background: "#0EA5E9", color: "#fff" }}
+                        className="rounded-full px-8 font-semibold hover:scale-105 transition-transform bg-[#007aff]"
+                        style={{ color: "#fff" }}
                         asChild
                       >
                         <a href="https://studioinova.gumroad.com/l/the-art-of-prompting" target="_blank" rel="noopener noreferrer">
