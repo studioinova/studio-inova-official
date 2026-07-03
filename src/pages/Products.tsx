@@ -1,3 +1,4 @@
+// Studio Inova: Ebook light theme and cover image fix finalized
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
