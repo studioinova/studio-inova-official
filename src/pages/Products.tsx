@@ -164,7 +164,7 @@ export default function Products() {
 
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src="/detect-ai-logo.jpg"
+                    src="/detect-ai-logo.jpg?v=2"
                     alt="Detect AI"
                     className="w-12 h-12 rounded-xl object-cover shadow-md"
                   />
@@ -257,7 +257,7 @@ export default function Products() {
                       onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(-8deg) rotateX(2deg)")}
                     >
                       <img
-                        src="/ebook-art-of-prompting.jpg"
+                        src="/ebook-art-of-prompting.jpg?v=2"
                         alt="The Art of Prompting — by Studio Inova"
                         className="w-full rounded-xl object-contain select-none"
                         draggable={false}
