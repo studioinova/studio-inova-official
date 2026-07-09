@@ -1,1 +1,0 @@
-import{j as e}from"./index-B0VfS19b.js";function n(){return e.jsxs("div",{className:"min-h-[70vh] flex flex-col items-center justify-center",children:[e.jsx("h1",{className:"text-2xl font-bold mb-2",children:"CEO Portal"}),e.jsx("p",{className:"text-muted-foreground",children:"Authentication required."})]})}export{n as component};
