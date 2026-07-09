@@ -160,7 +160,7 @@ export default function Home() {
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">Academy</h4>
+                  <h3 className="text-lg font-bold mb-2">Academy</h3>
                   <p className="text-[#4A5568] text-sm">We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.</p>
                 </div>
               </div>
