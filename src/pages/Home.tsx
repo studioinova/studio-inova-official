@@ -138,7 +138,7 @@ export default function Home() {
                   <Smartphone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">App Development</h4>
+                  <h3 className="text-lg font-bold mb-2">App Development</h3>
                   <p className="text-[#4A5568] text-sm">Developing user-centric mobile and web applications with a focus on simplicity and modern aesthetics.</p>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function Home() {
                   <Cpu className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">AI-Based Tools</h4>
+                  <h3 className="text-lg font-bold mb-2">AI-Based Tools</h3>
                   <p className="text-[#4A5568] text-sm">Intelligent AI detection and analysis tools like Detect AI, built to ensure authenticity in the digital age.</p>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function Home() {
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">Academy</h4>
+                  <h3 className="text-lg font-bold mb-2">Academy</h3>
                   <p className="text-[#4A5568] text-sm">We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.</p>
                 </div>
               </div>
