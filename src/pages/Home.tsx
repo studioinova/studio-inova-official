@@ -138,7 +138,7 @@ export default function Home() {
                   <Smartphone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">App Development</h4>
+                  <h3 className="text-lg font-bold mb-2">App Development</h3>
                   <p className="text-[#4A5568] text-sm">Developing user-centric mobile and web applications with a focus on simplicity and modern aesthetics.</p>
                 </div>
               </div>
