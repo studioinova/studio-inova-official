@@ -52,6 +52,23 @@ export default function Home() {
                   Innovation Starts Here
                 </p>
               </FadeIn>
+
+              <FadeIn direction="up" delay={0.36}>
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                  <Link
+                    to="/products"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm transition-all hover:scale-105 hover:bg-primary/90"
+                  >
+                    Explore Our Products
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg border-2 border-primary text-primary font-semibold text-sm transition-all hover:bg-primary hover:text-primary-foreground hover:scale-105"
+                  >
+                    Know About Us
+                  </Link>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Right network constellation — 45% */}
@@ -69,7 +86,16 @@ export default function Home() {
                     [130, 360], [60, 220], [230, 60], [230, 400], [180, 180],
                     [290, 190], [200, 300], [310, 290],
                   ].map(([x, y], i) => (
-                    <circle key={i} cx={x} cy={y} r={i === 0 ? 6 : 3} fill="currentColor" opacity={i === 0 ? 1 : 0.7} />
+                    <circle
+                      key={i}
+                      cx={x}
+                      cy={y}
+                      r={i === 0 ? 6 : 3}
+                      fill="currentColor"
+                      opacity={i === 0 ? 1 : 0.7}
+                      className={`hero-node ${i === 0 ? "hero-node-center" : ""}`}
+                      style={{ animationDelay: `${i * 0.25}s`, transformOrigin: `${x}px ${y}px` }}
+                    />
                   ))}
                   {[
                     [230, 230, 110, 100], [230, 230, 360, 90], [230, 230, 400, 250],
@@ -80,7 +106,16 @@ export default function Home() {
                     [130, 360, 60, 220], [60, 220, 110, 100],
                     [180, 180, 290, 190], [290, 190, 310, 290], [310, 290, 200, 300], [200, 300, 180, 180],
                   ].map(([x1, y1, x2, y2], i) => (
-                    <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} opacity="0.35" />
+                    <line
+                      key={i}
+                      x1={x1}
+                      y1={y1}
+                      x2={x2}
+                      y2={y2}
+                      opacity="0.35"
+                      className="hero-line"
+                      style={{ animationDelay: `${i * 0.12}s` }}
+                    />
                   ))}
                 </svg>
               </FadeIn>
