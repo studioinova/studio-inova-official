@@ -93,7 +93,7 @@ export default function Home() {
                       r={i === 0 ? 6 : 3}
                       fill="currentColor"
                       opacity={i === 0 ? 1 : 0.7}
-                      className="hero-node"
+                      className={`hero-node ${i === 0 ? "hero-node-center" : ""}`}
                       style={{ animationDelay: `${i * 0.25}s`, transformOrigin: `${x}px ${y}px` }}
                     />
                   ))}
