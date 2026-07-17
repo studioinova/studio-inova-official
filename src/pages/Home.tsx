@@ -55,9 +55,34 @@ export default function Home() {
             </div>
 
             {/* Right network constellation — 45% */}
-            <div className="w-full lg:w-[45%] flex items-center justify-center">
+            <div className="hidden lg:flex w-full lg:w-[45%] items-center justify-center">
               <FadeIn direction="up" delay={0.3}>
-                <NetworkConstellation className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto" />
+                <svg
+                  viewBox="0 0 460 460"
+                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                >
+                  {[
+                    [230, 230], [110, 100], [360, 90], [400, 250], [320, 380],
+                    [130, 360], [60, 220], [230, 60], [230, 400], [180, 180],
+                    [290, 190], [200, 300], [310, 290],
+                  ].map(([x, y], i) => (
+                    <circle key={i} cx={x} cy={y} r={i === 0 ? 6 : 3} fill="currentColor" opacity={i === 0 ? 1 : 0.7} />
+                  ))}
+                  {[
+                    [230, 230, 110, 100], [230, 230, 360, 90], [230, 230, 400, 250],
+                    [230, 230, 320, 380], [230, 230, 130, 360], [230, 230, 60, 220],
+                    [230, 230, 230, 60], [230, 230, 230, 400],
+                    [110, 100, 230, 60], [360, 90, 230, 60], [360, 90, 400, 250],
+                    [400, 250, 320, 380], [320, 380, 230, 400], [230, 400, 130, 360],
+                    [130, 360, 60, 220], [60, 220, 110, 100],
+                    [180, 180, 290, 190], [290, 190, 310, 290], [310, 290, 200, 300], [200, 300, 180, 180],
+                  ].map(([x1, y1, x2, y2], i) => (
+                    <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} opacity="0.35" />
+                  ))}
+                </svg>
               </FadeIn>
             </div>
           </div>
