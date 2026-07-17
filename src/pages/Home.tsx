@@ -8,70 +8,59 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Blurred background layer */}
+      <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-white">
+        {/* Soft blue glow from bottom-left */}
         <div
-          className="absolute inset-0 z-0 hero-bg-pan"
+          className="absolute bottom-0 left-0 w-[60vw] h-[60vh] pointer-events-none"
           style={{
-            backgroundImage: "url('/hero-bg.jpg')",
-            filter: "blur(2px)",
-            transform: "scale(1.05)",
+            background: "radial-gradient(ellipse 80% 100% at 0% 100%, rgba(0, 122, 255, 0.12) 0%, transparent 70%)",
+          }}
+        />
+        {/* Soft blue glow from bottom-right */}
+        <div
+          className="absolute bottom-0 right-0 w-[60vw] h-[60vh] pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 80% 100% at 100% 100%, rgba(0, 122, 255, 0.10) 0%, transparent 70%)",
           }}
         />
 
-        {/* Subtle animated gradient overlay for depth */}
-        <div className="absolute inset-0 hero-gradient-overlay" />
+        {/* Faint dotted grid in top-left */}
+        <div
+          className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 pointer-events-none opacity-40"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
 
-        {/* White overlay */}
-        <div className="absolute inset-0 z-[1]" style={{ background: "rgba(255, 255, 255, 0.4)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
+            {/* Left text — 55% */}
+            <div className="w-full lg:w-[55%] text-center lg:text-left">
+              <FadeIn direction="up">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-[0.2em] text-foreground uppercase leading-none">
+                  STUDIO INOVA
+                </h1>
+              </FadeIn>
 
-        {/* Sharp text content in front */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
-          <FadeIn direction="up">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
-              STUDIO INOVA
-              <span className="sr-only"> — Minimalist AI Tools & Apps</span>
-            </h1>
-          </FadeIn>
+              <FadeIn direction="up" delay={0.12}>
+                <div className="w-[60px] h-[3px] bg-primary mx-auto lg:mx-0 mt-6 mb-6 rounded-full" />
+              </FadeIn>
 
-          <FadeIn direction="up" delay={0.15}>
-            <p className="text-lg md:text-xl text-black/70 font-light tracking-wide">
-              Innovation Starts Here
-            </p>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.3}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-8">
-              <Link
-                to="/products"
-                className="inline-flex items-center justify-center px-7 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:brightness-110"
-                style={{ background: "#007AFF", borderRadius: "8px", minWidth: "180px" }}
-              >
-                Explore Our App
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center px-7 py-3 text-sm font-semibold transition-all"
-                style={{
-                  border: "2px solid #007AFF",
-                  color: "#007AFF",
-                  background: "transparent",
-                  borderRadius: "8px",
-                  minWidth: "180px",
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = "#007AFF";
-                  e.currentTarget.style.color = "#fff";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "#007AFF";
-                }}
-              >
-                Know About Us
-              </Link>
+              <FadeIn direction="up" delay={0.24}>
+                <p className="text-lg md:text-xl text-muted-foreground font-light tracking-[0.15em] uppercase">
+                  Innovation Starts Here
+                </p>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+            {/* Right network constellation — 45% */}
+            <div className="w-full lg:w-[45%] flex items-center justify-center">
+              <FadeIn direction="up" delay={0.3}>
+                <NetworkConstellation className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto" />
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
       {/* Core Values Section */}
