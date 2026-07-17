@@ -1,7 +1,13 @@
-I’ll patch the production build config so Lovable’s dist-check sees the expected TanStack Start output.
+## Why the preview looked broken
 
-Plan:
-1. Replace the manual Vite/TanStack/Nitro plugin setup in `vite.config.ts` with the Lovable TanStack config wrapper.
-2. Keep the existing path alias behavior through the wrapper/default config rather than manually ordering plugins.
-3. Leave `package.json` as-is because `@lovable.dev/vite-tanstack-config` is already installed.
-4. After implementation, rely on the platform build check to validate the production output.
+The earlier error `ReferenceError: NetworkConstellation is not defined` in `src/pages/Home.tsx` was already fixed in the previous turn — the missing component was replaced with an inline SVG constellation graphic (lines 60–85). The current source is clean and the typecheck passes.
+
+The error entries you saw in the dev-server log are older SSR errors from before that fix; the log is append-only, so previous stack traces remain visible even after a successful reload.
+
+## Plan
+
+1. Hard-refresh the preview tab (Cmd/Ctrl + Shift + R) so the browser drops the cached broken SSR HTML and picks up the current build.
+2. If it still doesn't render, I'll restart the dev server to force a clean SSR reload.
+3. No code changes are needed unless step 2 surfaces a new error.
+
+Approve this and I'll refresh/restart from build mode.
