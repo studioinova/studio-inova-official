@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket, GraduationCap, Compass } from "lucide-react";
 import NoaWidget from "@/components/NoaWidget";
+import ParticleNetwork from "@/components/ParticleNetwork";
 
 export default function Home() {
   return (
