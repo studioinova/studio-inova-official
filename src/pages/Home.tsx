@@ -19,9 +19,6 @@ export default function Home() {
             </h1>
           </FadeIn>
 
-          <FadeIn direction="up" delay={0.12}>
-            <div className="w-[60px] h-[3px] mx-auto mt-6 mb-6 rounded-full" style={{ backgroundColor: "#2f7dff" }} />
-          </FadeIn>
 
           <FadeIn direction="up" delay={0.24}>
             <p className="text-lg md:text-xl text-muted-foreground font-light tracking-[0.15em] uppercase">
