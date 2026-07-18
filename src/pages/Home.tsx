@@ -18,6 +18,14 @@ export default function Home() {
           <div className="absolute top-10 right-1/3 w-[320px] h-[320px] rounded-full bg-[#93c5fd] opacity-20 blur-[100px]" />
         </div>
         <ParticleNetwork />
+        {/* Bottom fade overlay: blue glow fades into the next section */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-0 right-0 h-[40vh] z-[1]"
+          style={{
+            background: "linear-gradient(to bottom, rgba(248,249,250,0) 0%, rgba(248,249,250,0.7) 60%, rgba(248,249,250,1) 100%)",
+          }}
+        />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 text-center">
           <FadeIn direction="up">
