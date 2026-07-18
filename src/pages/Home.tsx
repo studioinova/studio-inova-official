@@ -10,6 +10,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: "#f4f6fa" }}>
+        {/* Soft blue glow blobs for depth */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-32 -left-24 w-[520px] h-[520px] rounded-full bg-[#2f7dff] opacity-20 blur-[120px]" />
+          <div className="absolute top-1/3 -right-32 w-[560px] h-[560px] rounded-full bg-[#60a5fa] opacity-[0.18] blur-[130px]" />
+          <div className="absolute -bottom-40 left-1/4 w-[600px] h-[600px] rounded-full bg-[#3b82f6] opacity-[0.16] blur-[140px]" />
+          <div className="absolute top-10 right-1/3 w-[320px] h-[320px] rounded-full bg-[#93c5fd] opacity-20 blur-[100px]" />
+        </div>
         <ParticleNetwork />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 text-center">
