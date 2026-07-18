@@ -9,119 +9,46 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-white">
-        {/* Soft blue glow from bottom-left */}
-        <div
-          className="absolute bottom-0 left-0 w-[60vw] h-[60vh] pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 80% 100% at 0% 100%, rgba(0, 122, 255, 0.12) 0%, transparent 70%)",
-          }}
-        />
-        {/* Soft blue glow from bottom-right */}
-        <div
-          className="absolute bottom-0 right-0 w-[60vw] h-[60vh] pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 80% 100% at 100% 100%, rgba(0, 122, 255, 0.10) 0%, transparent 70%)",
-          }}
-        />
+      <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: "#f4f6fa" }}>
+        <ParticleNetwork />
 
-        {/* Faint dotted grid in top-left */}
-        <div
-          className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 pointer-events-none opacity-40"
-          style={{
-            backgroundImage: "radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 text-center">
+          <FadeIn direction="up">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[0.2em] text-foreground uppercase leading-none">
+              STUDIO INOVA
+            </h1>
+          </FadeIn>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
-            {/* Left text — 55% */}
-            <div className="w-full lg:w-[55%] text-center lg:text-left">
-              <FadeIn direction="up">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-[0.2em] text-foreground uppercase leading-none">
-                  STUDIO INOVA
-                </h1>
-              </FadeIn>
+          <FadeIn direction="up" delay={0.12}>
+            <div className="w-[60px] h-[3px] mx-auto mt-6 mb-6 rounded-full" style={{ backgroundColor: "#2f7dff" }} />
+          </FadeIn>
 
-              <FadeIn direction="up" delay={0.12}>
-                <div className="w-[60px] h-[3px] bg-primary mx-auto lg:mx-0 mt-6 mb-6 rounded-full" />
-              </FadeIn>
+          <FadeIn direction="up" delay={0.24}>
+            <p className="text-lg md:text-xl text-muted-foreground font-light tracking-[0.15em] uppercase">
+              Innovation Starts Here
+            </p>
+          </FadeIn>
 
-              <FadeIn direction="up" delay={0.24}>
-                <p className="text-lg md:text-xl text-muted-foreground font-light tracking-[0.15em] uppercase">
-                  Innovation Starts Here
-                </p>
-              </FadeIn>
-
-              <FadeIn direction="up" delay={0.36}>
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <Link
-                    to="/products"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm transition-all hover:scale-105 hover:bg-primary/90"
-                  >
-                    Explore Our Products
-                  </Link>
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg border-2 border-primary text-primary font-semibold text-sm transition-all hover:bg-primary hover:text-primary-foreground hover:scale-105"
-                  >
-                    Know About Us
-                  </Link>
-                </div>
-              </FadeIn>
+          <FadeIn direction="up" delay={0.36}>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg text-white font-semibold text-sm transition-all hover:scale-105"
+                style={{ backgroundColor: "#2f7dff" }}
+              >
+                Explore Our Products
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 rounded-lg border-2 font-semibold text-sm transition-all hover:scale-105 hover:text-white"
+                style={{ borderColor: "#2f7dff", color: "#2f7dff" }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#2f7dff")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+              >
+                Know About Us
+              </Link>
             </div>
-
-            {/* Right network constellation — 45% */}
-            <div className="hidden lg:flex w-full lg:w-[45%] items-center justify-center">
-              <FadeIn direction="up" delay={0.3}>
-                <svg
-                  viewBox="0 0 460 460"
-                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                >
-                  {[
-                    [230, 230], [110, 100], [360, 90], [400, 250], [320, 380],
-                    [130, 360], [60, 220], [230, 60], [230, 400], [180, 180],
-                    [290, 190], [200, 300], [310, 290],
-                  ].map(([x, y], i) => (
-                    <circle
-                      key={i}
-                      cx={x}
-                      cy={y}
-                      r={i === 0 ? 6 : 3}
-                      fill="currentColor"
-                      opacity={i === 0 ? 1 : 0.7}
-                      className={`hero-node ${i === 0 ? "hero-node-center" : ""}`}
-                      style={{ animationDelay: `${i * 0.25}s`, transformOrigin: `${x}px ${y}px` }}
-                    />
-                  ))}
-                  {[
-                    [230, 230, 110, 100], [230, 230, 360, 90], [230, 230, 400, 250],
-                    [230, 230, 320, 380], [230, 230, 130, 360], [230, 230, 60, 220],
-                    [230, 230, 230, 60], [230, 230, 230, 400],
-                    [110, 100, 230, 60], [360, 90, 230, 60], [360, 90, 400, 250],
-                    [400, 250, 320, 380], [320, 380, 230, 400], [230, 400, 130, 360],
-                    [130, 360, 60, 220], [60, 220, 110, 100],
-                    [180, 180, 290, 190], [290, 190, 310, 290], [310, 290, 200, 300], [200, 300, 180, 180],
-                  ].map(([x1, y1, x2, y2], i) => (
-                    <line
-                      key={i}
-                      x1={x1}
-                      y1={y1}
-                      x2={x2}
-                      y2={y2}
-                      opacity="0.35"
-                      className="hero-line"
-                      style={{ animationDelay: `${i * 0.12}s` }}
-                    />
-                  ))}
-                </svg>
-              </FadeIn>
-            </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
       {/* Core Values Section */}
