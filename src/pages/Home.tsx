@@ -29,8 +29,12 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 text-center">
           <FadeIn direction="up">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[0.2em] text-foreground uppercase leading-none">
-              STUDIO INOVA
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[0.12em] uppercase leading-[0.85] bg-gradient-to-br from-[#0c1b3a] to-[#1a3a6b] bg-clip-text text-transparent"
+              style={{ textShadow: "0 4px 20px rgba(12,27,58,0.1)" }}
+            >
+              <span className="block">STUDIO</span>
+              <span className="block">INOVA</span>
             </h1>
           </FadeIn>
 
