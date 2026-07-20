@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Mail, Send, Loader2, MapPin } from "lucide-react";
+import { FaYoutube, FaRedditAlien, FaInstagram } from "react-icons/fa";
 import {
   Form,
   FormControl,
