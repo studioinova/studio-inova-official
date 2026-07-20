@@ -27,16 +27,16 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Studio Inova began as an independent digital studio with a clear
-                mandate: build technology that respects the user. In an era
-                overwhelmed by complex, intrusive applications, we chose a
-                different path.
+                Studio Inova is an independent, solo-run digital project with a
+                clear focus: build technology that respects the user. In a space
+                crowded with complex, intrusive applications, the aim is to keep
+                things small, honest, and genuinely useful.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                We focus on responsible AI—tools that enhance human capability
-                rather than replacing it. By taking small, calculated steps, we
-                ensure every product we release is stable, secure, and genuinely
-                useful.
+                The work centers on responsible AI—tools that support human
+                capability rather than replace it. By taking small, calculated
+                steps, each product is built to be stable, secure, and useful
+                before anything else.
               </p>
             </div>
           </FadeIn>
@@ -50,71 +50,64 @@ export default function About() {
                 Our Vision
               </h2>
               <p className="text-lg text-foreground/80 font-medium leading-relaxed relative z-10">
-                Studio Inova aims to become a leading AI-driven studio that
-                creates smart, ethical digital solutions setting the standard
-                for user trust globally.
+                Studio Inova's vision is to keep building thoughtful, ethical
+                digital tools—one feature at a time—and to grow a community of
+                users who value simplicity and trust over hype.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-
-     
       {/* Team / Leadership Section */}
-            <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full py-24 text-center">
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-12 text-foreground">Meet The Founder</h2>
-                <div className="inline-block text-left w-full max-w-3xl">
-                  <div className="inova-card p-8 border border-border/40 flex flex-col md:flex-row items-center gap-10 w-full rounded-2xl bg-card">
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full py-24 text-center">
+        <FadeIn>
+          <h2 className="text-3xl font-bold mb-12 text-foreground">Meet The Founder</h2>
+          <div className="inline-block text-left w-full max-w-3xl">
+            <div className="inova-card p-8 border border-border/40 flex flex-col md:flex-row items-center gap-10 w-full rounded-2xl bg-card">
 
-                    {/* Illustration Area */}
-                    <div className="w-48 h-48 shrink-0 bg-[#f0f4f8] rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden shadow-inner">
-                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                        <span className="text-primary font-bold text-5xl mb-1">S</span>
-                        <span className="text-[10px] uppercase tracking-tighter text-muted-foreground">The Creative Builder</span>
-                      </div>
-                      <img 
-                        src="/sazid-founder-ceo.png"
-                        alt="Sazid, Founder of Studio Inova" 
-                        className="w-full h-full object-cover absolute inset-0 z-10"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    </div>
-
-                    {/* Text Details Area */}
-                    <div className="text-center md:text-left flex-1">
-                      <h3 className="text-4xl font-extrabold text-foreground mb-1 tracking-tight">Sazid</h3>
-
-                      <p className="text-black font-extrabold text-sm md:text-base mb-3 tracking-[0.2em] uppercase">
-                        FOUNDER & CEO, STUDIO INOVA
-                      </p>
-
-                      <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
-                        <span className="text-xs font-medium px-2 py-1 bg-secondary text-secondary-foreground rounded">Author</span>
-                        <span className="text-xs font-medium px-2 py-1 bg-secondary text-secondary-foreground rounded">AI Strategist</span>
-                      </div>
-
-                      <div className="space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
-                        <p>
-                          Sazid is a tech visionary and the author of 'Zero Knowledge to App Builder.' As the Founder and CEO of Studio Inova, he is dedicated to simplifying complex AI technology into minimalist, high-impact tools.
-                        </p>
-                      </div>
-
-                      {/* The missing bracket issue is completely fixed here */}
-                      <p className="text-foreground font-bold text-sm md:text-base mt-8 tracking-wide">
-                        "At Studio Inova, we don't just build apps; we build solutions."
-                      </p>
-                    </div>
-
-                  </div>
+              {/* Illustration Area */}
+              <div className="w-48 h-48 shrink-0 bg-[#f0f4f8] rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden shadow-inner">
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                  <span className="text-primary font-bold text-5xl mb-1">S</span>
+                  <span className="text-[10px] uppercase tracking-tighter text-muted-foreground">The Creative Builder</span>
                 </div>
-              </FadeIn>
-            </section>
+                <img
+                  src="/sazid-founder-ceo.png"
+                  alt="Sazid, Founder of Studio Inova"
+                  className="w-full h-full object-cover absolute inset-0 z-10"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+
+              {/* Text Details Area */}
+              <div className="text-center md:text-left flex-1">
+                <h3 className="text-4xl font-extrabold text-foreground mb-1 tracking-tight">Sazid</h3>
+
+                <p className="text-black font-extrabold text-sm md:text-base mb-3 tracking-[0.2em] uppercase">
+                  Founder & Solo Builder, Studio Inova
+                </p>
+
+                <div className="space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+                  <p>
+                    Sazid is the sole builder behind Studio Inova, dedicated to simplifying complex AI technology into minimalist, high-impact tools — designed, built, and shipped independently.
+                  </p>
+                </div>
+
+                <p className="text-foreground font-bold text-sm md:text-base mt-8 tracking-wide">
+                  "At Studio Inova, we don't just build apps; we build solutions."
+                </p>
+              </div>
+
+            </div>
           </div>
-        );
-      };
+        </FadeIn>
+      </section>
+    </div>
+  );
+}
+
 
     
