@@ -124,6 +124,40 @@ export default function Contact() {
                   <p className="text-foreground font-semibold">Dhaka, Bangladesh</p>
                 </div>
               </div>
+
+              {/* Follow Us */}
+              <div className="pt-2">
+                <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4">Follow Us</h4>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.youtube.com/channel/UClhF1qOzzLkqKdK8cWFy3Ew"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-red-500 hover:text-red-500 hover:bg-red-500/10"
+                  >
+                    <FaYoutube size={22} />
+                  </a>
+                  <a
+                    href="https://www.reddit.com/user/studio_inova/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Reddit"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-orange-500 hover:text-orange-500 hover:bg-orange-500/10"
+                  >
+                    <FaRedditAlien size={22} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/studioinova.official/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-pink-500 hover:text-pink-500 hover:bg-pink-500/10"
+                  >
+                    <FaInstagram size={22} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
