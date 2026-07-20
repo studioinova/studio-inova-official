@@ -134,27 +134,27 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"
-                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-red-500 hover:text-red-500 hover:bg-red-500/10"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-red-500 hover:text-red-500 hover:bg-red-500/10 cursor-pointer"
                   >
-                    <FaYoutube size={22} />
+                    <FaYoutube size={22} className="pointer-events-none" />
                   </a>
                   <a
                     href="https://www.reddit.com/user/studio_inova/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Reddit"
-                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-orange-500 hover:text-orange-500 hover:bg-orange-500/10"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-orange-500 hover:text-orange-500 hover:bg-orange-500/10 cursor-pointer"
                   >
-                    <FaRedditAlien size={22} />
+                    <FaRedditAlien size={22} className="pointer-events-none" />
                   </a>
                   <a
                     href="https://www.instagram.com/studioinova.official/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-pink-500 hover:text-pink-500 hover:bg-pink-500/10"
+                    className="w-11 h-11 rounded-full bg-primary/5 border border-primary/10 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:border-pink-500 hover:text-pink-500 hover:bg-pink-500/10 cursor-pointer"
                   >
-                    <FaInstagram size={22} />
+                    <FaInstagram size={22} className="pointer-events-none" />
                   </a>
                 </div>
               </div>
