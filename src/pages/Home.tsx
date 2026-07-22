@@ -91,7 +91,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Simple</h3>
                 <p className="text-muted-foreground">
-                  We strip away the unnecessary. Our tools are designed with clean, intuitive interfaces that anyone can pick up and use immediately.
+                  We keep things minimal because one person can only maintain so much. Every tool is built with just what's needed — no bloated features, no unnecessary complexity, just clean interfaces that work the way you'd expect.
                 </p>
               </div>
             </FadeIn>
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Effective</h3>
                 <p className="text-muted-foreground">
-                  Functionality is our baseline. We solve real problems with calculated steps, ensuring every feature provides tangible value.
+                  Functionality is the baseline. Every tool here exists because a real problem needed solving — usually one I ran into myself. If a feature doesn't add tangible value, it doesn't make the cut.
                 </p>
               </div>
             </FadeIn>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Our Philosophy</h3>
                 <p className="text-muted-foreground">
-                  We believe in building transparent, step-by-step solutions without rushed or fake claims. Our focus is on steady growth, honest features, and creating digital products that bring genuine, long-term value.
+                  Every tool starts with a plan — deciding exactly what it needs to do before a single line of code is written. It's built carefully against that plan, then released. But the work doesn't stop at launch — each product keeps evolving, with new updates and improvements added over time as it's used and understood better.
                 </p>
               </div>
             </FadeIn>
