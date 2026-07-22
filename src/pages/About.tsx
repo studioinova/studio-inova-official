@@ -28,15 +28,17 @@ export default function About() {
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Studio Inova is an independent, solo-run digital project with a
-                clear focus: build technology that respects the user. In a space
-                crowded with complex, intrusive applications, the aim is to keep
-                things small, honest, and genuinely useful.
+                clear focus: build tools that actually work. As a regular user
+                of countless apps myself, I run into problems constantly — some
+                with no real solution, some with a solution that just doesn't
+                work well. I don't want others to run into the same wall I did.
+                That's the reason each product exists.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                The work centers on responsible AI—tools that support human
-                capability rather than replace it. By taking small, calculated
-                steps, each product is built to be stable, secure, and useful
-                before anything else.
+                The work isn't limited to one type of tool or one kind of user —
+                some products use AI, some don't, whatever the problem actually
+                needs. By taking small, calculated steps, each product is built
+                to be stable, secure, and useful before anything else.
               </p>
             </div>
           </FadeIn>
@@ -50,9 +52,11 @@ export default function About() {
                 Our Vision
               </h2>
               <p className="text-lg text-foreground/80 font-medium leading-relaxed relative z-10">
-                Studio Inova's vision is to keep building thoughtful, ethical
-                digital tools—one feature at a time—and to grow a community of
-                users who value simplicity and trust over hype.
+                Studio Inova's vision is simple: solve the problems I personally
+                run into, so that others don't have to face them either.
+                There's no fixed category, no fixed audience — just useful tools
+                and apps, built with AI where it helps and without it where it
+                doesn't, each one shaped by a real problem worth fixing.
               </p>
             </div>
           </FadeIn>
