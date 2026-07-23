@@ -128,7 +128,7 @@ export default function Home() {
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Studio Inova is a solo-run digital project working across design and technology — building tools that feel simple on the surface, even when there's real work happening underneath.
+              Studio Inova operates at the intersection of modern design and advanced technology. We build solutions that feel effortless to the user while performing complex tasks under the hood.
             </p>
           </FadeIn>
 
@@ -140,7 +140,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">App Development</h3>
-                  <p className="text-[#4A5568] text-sm">Building simple, user-focused mobile and web apps — clean interfaces, no unnecessary complexity, made to just work.</p>
+                  <p className="text-[#4A5568] text-sm">Developing user-centric mobile and web applications with a focus on simplicity and modern aesthetics.</p>
                 </div>
               </div>
             </FadeIn>
@@ -150,7 +150,7 @@ export default function Home() {
                   <Cpu className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">{"\n"}</h3>
+                  <h3 className="text-lg font-bold mb-2">AI-Based Tools</h3>
                   <p className="text-[#4A5568] text-sm">Intelligent AI detection and analysis tools like Detect AI, built to ensure authenticity in the digital age.</p>
                 </div>
               </div>
