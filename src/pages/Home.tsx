@@ -128,7 +128,7 @@ export default function Home() {
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Studio Inova operates at the intersection of modern design and advanced technology. We build solutions that feel effortless to the user while performing complex tasks under the hood.
+              Studio Inova is a solo-run digital project working across design and technology — building tools that feel simple on the surface, even when there's real work happening underneath.
             </p>
           </FadeIn>
 
@@ -140,7 +140,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">App Development</h3>
-                  <p className="text-[#4A5568] text-sm">Developing user-centric mobile and web applications with a focus on simplicity and modern aesthetics.</p>
+                  <p className="text-[#4A5568] text-sm">Building simple, user-focused mobile and web apps — clean interfaces, no unnecessary complexity, made to just work.</p>
                 </div>
               </div>
             </FadeIn>
@@ -150,8 +150,8 @@ export default function Home() {
                   <Cpu className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">AI-Based Tools</h3>
-                  <p className="text-[#4A5568] text-sm">Intelligent AI detection and analysis tools like Detect AI, built to ensure authenticity in the digital age.</p>
+                  <h3 className="text-lg font-bold mb-2">Utility Tools</h3>
+                  <p className="text-[#4A5568] text-sm">Building tools with whatever technology actually fits the problem — AI where it genuinely helps, and simpler approaches where it doesn't. The goal is always the right solution, not just the trendy one.</p>
                 </div>
               </div>
             </FadeIn>
@@ -162,7 +162,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">Academy</h3>
-                  <p className="text-[#4A5568] text-sm">We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.</p>
+                  <p className="text-[#4A5568] text-sm">I write ebooks that break down AI in a simple, practical way — no jargon, no assumed background, just what you actually need to understand and start using it. More topics are on the way as I keep learning and writing.</p>
                 </div>
               </div>
             </FadeIn>
