@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import Products from "@/pages/Products";
 
 const URL = "https://studio-inova-official.lovable.app/products";
-const TITLE = "Products — Detect AI and AI Learning E-book | Studio Inova";
+const TITLE = "Products — TrueOpen and AI Learning E-book | Studio Inova";
 const DESCRIPTION =
-  "Explore Studio Inova's products — Detect AI for spotting AI-generated content, and our Zero-to-App AI learning e-book for beginners.";
+  "Explore Studio Inova's products — TrueOpen for honest newsletter engagement insights, and our Zero-to-App AI learning e-book for beginners.";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -27,9 +27,9 @@ export const Route = createFileRoute("/products")({
           "@graph": [
             {
               "@type": "Product",
-              name: "Detect AI",
+              name: "TrueOpen",
               description:
-                "AI-powered tool for detecting AI-generated content and ensuring authenticity in the digital age.",
+                "Free tool for solo newsletter writers that reveals real email engagement by filtering out fake opens caused by Apple Mail Privacy Protection.",
               brand: { "@type": "Brand", name: "Studio Inova" },
               url: URL,
             },
