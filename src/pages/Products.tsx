@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Check, ChevronLeft, ChevronRight, MailSearch } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
