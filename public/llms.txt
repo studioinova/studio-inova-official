@@ -6,7 +6,7 @@
 
 - [Home](/): Overview of Studio Inova, our values, services, and approach.
 - [About](/about): Mission, philosophy, and the founder behind Studio Inova.
-- [Products](/products): Detect AI tool and the Zero-to-App AI learning e-book.
+- [Products](/products): TrueOpen newsletter engagement tool and the Zero-to-App AI learning e-book.
 - [Contact](/contact): Reach out with feedback, suggestions, or project inquiries.
 
 ## Optional
