@@ -78,24 +78,17 @@ export default function Products() {
                 </Button>
               </div>
 
-              {/* Icon Visual Area */}
-              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative border-t lg:border-t-0 lg:border-l border-border min-h-[420px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
-                <div className="relative z-10 flex flex-col items-center justify-center gap-6">
-                  <div
-                    className="w-40 h-40 rounded-[32px] flex items-center justify-center"
-                    style={{
-                      background: "linear-gradient(135deg, #007AFF 0%, #0057D8 100%)",
-                      boxShadow: "0 25px 50px rgba(0,122,255,0.35)",
-                    }}
-                  >
-                    <MailSearch className="w-20 h-20 text-white" strokeWidth={1.5} />
-                  </div>
-                  <p className="text-sm font-semibold tracking-wide text-center" style={{ color: "#007AFF" }}>
-                    For newsletter writers
-                  </p>
-                </div>
+              {/* Screenshot Visual Area — flat neutral panel (image has its own background/shadow) */}
+              <div className="lg:w-1/2 bg-white p-6 md:p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-border min-h-[420px]">
+                <img
+                  src={trueOpenShot.url}
+                  alt="TrueOpen dashboard showing adjusted engagement score versus raw open rate"
+                  className="w-full max-w-[520px] h-auto object-contain select-none"
+                  loading="lazy"
+                  draggable={false}
+                />
               </div>
+
             </div>
           </FadeIn>
         </div>
