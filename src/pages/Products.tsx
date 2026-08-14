@@ -147,9 +147,9 @@ export default function Products() {
           </p>
         </FadeIn>
 
-        {/* ── Our Apps ── */}
+        {/* ── Our Tools ── */}
         <FadeIn className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Our Apps</h2>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Our Tools</h2>
         </FadeIn>
 
         <div className="flex flex-col gap-16">
