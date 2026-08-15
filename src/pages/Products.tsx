@@ -1,9 +1,10 @@
 // Studio Inova: Ebook light theme and cover image fix finalized
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, MailSearch } from "lucide-react";
+import { ExternalLink, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import trueOpenShot from "@/assets/trueopen-screenshot.png.asset.json";
+import trueOpenLogo from "@/assets/trueopen-logo.png.asset.json";
 
 
 
