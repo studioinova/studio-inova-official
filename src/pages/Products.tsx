@@ -3,6 +3,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Check, MailSearch } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import trueOpenShot from "@/assets/trueopen-screenshot.png.asset.json";
+
 
 
 export default function Products() {
