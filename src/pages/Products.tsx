@@ -35,12 +35,12 @@ export default function Products() {
                 </Badge>
 
                 <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md"
-                    style={{ background: "#007AFF" }}
-                  >
-                    <MailSearch className="w-6 h-6 text-white" strokeWidth={2} />
-                  </div>
+                  <img
+                    src={trueOpenLogo.url}
+                    alt="TrueOpen logo"
+                    className="w-12 h-12 rounded-xl shadow-md object-contain flex-shrink-0 self-center"
+                    draggable={false}
+                  />
                   <h2 className="text-3xl font-bold">TrueOpen — See what really happened after you hit send</h2>
                 </div>
 
