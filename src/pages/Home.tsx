@@ -3,7 +3,6 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket, GraduationCap, Compass } from "lucide-react";
 import NoaWidget from "@/components/NoaWidget";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         {/* Full-bleed background video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src={heroVideo.url}
+          src="/hero-video.mp4"
           autoPlay
           loop
           muted
