@@ -1,13 +1,13 @@
 # Studio Inova
 
-> Studio Inova is a digital studio building minimalist, high-impact AI tools, apps, and clean digital experiences.
+> Studio Inova is a digital studio building simple, focused SaaS products for creators and modern teams.
 
 ## Pages
 
-- [Home](/): Overview of Studio Inova, our values, services, and approach.
+- [Home](/): Overview of Studio Inova, our values, products, and approach.
 - [About](/about): Mission, philosophy, and the founder behind Studio Inova.
-- [Products](/products): TrueOpen newsletter engagement tool and the Zero-to-App AI learning e-book.
-- [Contact](/contact): Reach out with feedback, suggestions, or project inquiries.
+- [Products](/products): TrueOpen newsletter engagement product.
+- [Contact](/contact): Reach out with feedback, suggestions, or product inquiries.
 
 ## Optional
 

@@ -58,8 +58,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Studio Inova" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Studio Inova — Minimalist AI Tools and Apps" },
-      { name: "description", content: "Studio Inova is a digital studio building minimalist, high-impact AI tools, apps, and clean digital experiences for creators and modern teams." },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/logo.png" },
@@ -79,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Studio Inova",
-          url: "https://studio-inova-official.lovable.app",
+          url: "https://studio-inova-official.vercel.app",
         }),
       },
     ],

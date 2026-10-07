@@ -20,7 +20,7 @@ export default function NoaWidget() {
       }`}
     >
       <div className="hidden sm:block max-w-[260px] rounded-2xl rounded-br-sm bg-white border border-[#0A2540]/10 px-4 py-3 text-sm text-[#0A2540] leading-relaxed shadow-[0_10px_30px_-12px_rgba(10,37,64,0.25)]">
-        Hey! I'm <span className="font-semibold">Noa</span>. Welcome to Studio Inova—where we create simple solutions and AI-assisted tools for a better tomorrow. ✨
+        Hey! I'm <span className="font-semibold">Noa</span>. Welcome to Studio Inova, where we build simple SaaS products for a better tomorrow. ✨
       </div>
       <img
         src="/noa_with_bg-removebg-preview.png"

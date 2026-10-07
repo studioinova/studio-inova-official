@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Contact from "@/pages/Contact";
 
-const URL = "https://studio-inova-official.lovable.app/contact";
+const URL = "https://studio-inova-official.vercel.app/contact";
 const TITLE = "Contact Studio Inova — Get in Touch";
 const DESCRIPTION =
-  "Get in touch with Studio Inova. Share feedback, suggestions, or project inquiries — we'd love to hear from you.";
+  "Get in touch with Studio Inova. Share product feedback, suggestions, or inquiries — we'd love to hear from you.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -15,6 +15,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: URL },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
