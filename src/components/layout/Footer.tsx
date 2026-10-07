@@ -18,7 +18,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-              We are a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future.
+              Studio Inova builds simple, focused SaaS products.
             </p>
           </div>
 

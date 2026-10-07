@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://studio-inova-official.lovable.app/sitemap.xml
+Sitemap: https://studio-inova-official.vercel.app/sitemap.xml

@@ -7,7 +7,7 @@ export default function TermsOfService() {
       {/* Header Banner */}
       <div className="w-full bg-[#007AFF] py-16 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Terms of Service</h1>
-        <p className="text-blue-100 text-sm">Effective Date: January 1, 2026 &nbsp;·&nbsp; Studio Inova</p>
+        <p className="text-blue-100 text-sm">Effective Date: October 7, 2026 &nbsp;·&nbsp; Studio Inova</p>
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -25,7 +25,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold text-black">1. Acceptance of Terms</h2>
             </div>
             <p>
-              By accessing or using any Studio Inova digital product, AI-powered tool, application, or website (collectively, the "Services"), you confirm that you have read, understood, and agree to be bound by these Terms of Service.
+              By accessing or using any Studio Inova SaaS product or website (collectively, the "Services"), you confirm that you have read, understood, and agree to be bound by these Terms of Service.
             </p>
             <p className="mt-3">
               If you do not agree to these Terms, you must immediately stop using our Services. These Terms apply to all visitors, users, and others who access or use the Services.
@@ -42,15 +42,15 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold text-black">2. User Conduct</h2>
             </div>
             <p className="mb-4">
-              You agree to use our Services only for lawful, ethical, and intended purposes. When using any Studio Inova product or tool, you must not:
+              You agree to use our Services only for lawful, ethical, and intended purposes. When using any Studio Inova product or service, you must not:
             </p>
             <div className="space-y-3">
               {[
                 "Violate any applicable local, national, or international law or regulation.",
                 "Submit content that is harmful, abusive, defamatory, obscene, or that infringes on the rights of any third party.",
-                "Attempt to reverse-engineer, decompile, copy, or reproduce any part of our AI tools, software, or proprietary systems.",
+                "Attempt to reverse-engineer, decompile, copy, or reproduce any part of our products, software, or proprietary systems.",
                 "Use automated scripts, bots, or scrapers to access our Services without prior written consent from Studio Inova.",
-                "Misrepresent the results of our AI tools as definitive legal, academic, or professional proof.",
+                "Misrepresent the results of our products as definitive legal, academic, or professional proof.",
                 "Engage in any activity that disrupts, damages, or impairs the functionality of our Services or servers.",
                 "Use our Services to generate, distribute, or promote misinformation or deceptive content.",
               ].map((item, i) => (
@@ -78,7 +78,7 @@ export default function TermsOfService() {
             <div className="bg-[#007AFF]/5 border border-[#007AFF]/20 rounded-xl p-6 my-6">
               <h3 className="font-semibold text-black mb-2">Studio Inova Ownership</h3>
               <p className="text-sm leading-relaxed">
-                <strong>Studio Inova exclusively owns all app designs, user interface layouts, visual assets, branding elements, source code, AI model configurations, and product concepts</strong> across all of its applications — including Detect AI, Vesper AI Translator, and any future products. This ownership extends to all versions, updates, and derivative works.
+                <strong>Studio Inova owns the name, logo, brand, source code, UI/UX designs, and product concepts</strong> of all its SaaS products, including TrueOpen and future products. This ownership extends to all versions, updates, and derivative works.
               </p>
             </div>
 
@@ -87,9 +87,8 @@ export default function TermsOfService() {
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>The Studio Inova name, logo, and brand identity</li>
-              <li>All app UI/UX designs and visual layouts</li>
-              <li>Written content, ebooks, and guides authored by Studio Inova</li>
-              <li>Underlying AI tool architectures and scan logic</li>
+              <li>All product UI/UX designs and visual layouts</li>
+              <li>Product source code and concepts</li>
               <li>Marketing materials and product descriptions</li>
             </ul>
             <p className="mt-4">
@@ -105,9 +104,9 @@ export default function TermsOfService() {
             </div>
 
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 my-6">
-              <h3 className="font-semibold text-black mb-2">AI Tools — For Informational Purposes Only</h3>
+              <h3 className="font-semibold text-black mb-2">Products For Informational Purposes</h3>
               <p className="text-sm leading-relaxed">
-                <strong>Studio Inova's AI tools, including Detect AI, are provided for informational purposes only.</strong> Results generated by our tools represent probabilistic assessments and should not be used as the sole or definitive basis for any academic, legal, professional, or financial decision. Studio Inova does not guarantee the accuracy, completeness, or reliability of any AI-generated output.
+                <strong>TrueOpen's results are estimates for informational purposes only</strong> and should not be the sole basis for business decisions. Studio Inova does not guarantee the accuracy, completeness, or reliability of these results.
               </p>
             </div>
 
@@ -116,7 +115,7 @@ export default function TermsOfService() {
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our Services.</li>
-              <li>Decisions made based on the results of our AI tools.</li>
+              <li>Decisions made based on the results of our products.</li>
               <li>Temporary unavailability or technical errors in our Services.</li>
               <li>Loss of data, revenue, or business opportunities connected to the use of our products.</li>
             </ul>

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket, GraduationCap, Compass } from "lucide-react";
+import { Zap, CheckCircle2, Search, Paintbrush, Code2, Rocket, Compass } from "lucide-react";
 import NoaWidget from "@/components/NoaWidget";
 
 export default function Home() {
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Simple</h3>
                 <p className="text-muted-foreground">
-                  We keep things minimal because one person can only maintain so much. Every tool is built with just what's needed — no bloated features, no unnecessary complexity, just clean interfaces that work the way you'd expect.
+                  As a founder-led studio, we keep things minimal. Every product is built with just what's needed — no bloated features, no unnecessary complexity, just clean interfaces that work the way you'd expect.
                 </p>
               </div>
             </FadeIn>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Effective</h3>
                 <p className="text-muted-foreground">
-                  Functionality is the baseline. Every tool here exists because a real problem needed solving — usually one I ran into myself. If a feature doesn't add tangible value, it doesn't make the cut.
+                  Functionality is the baseline. Every product here exists because a real problem needed solving — usually one I ran into myself. If a feature doesn't add tangible value, it doesn't make the cut.
                 </p>
               </div>
             </FadeIn>
@@ -127,58 +127,25 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Our Philosophy</h3>
                 <p className="text-muted-foreground">
-                  Every tool starts with a plan — deciding exactly what it needs to do before a single line of code is written. It's built carefully against that plan, then released. But the work doesn't stop at launch — each product keeps evolving, with new updates and improvements added over time as it's used and understood better.
+                  Every product starts with a plan — deciding exactly what it needs to do before a single line of code is written. It's built carefully against that plan, then released. But the work doesn't stop at launch — each product keeps evolving, with new updates and improvements added over time as it's used and understood better.
                 </p>
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
-      {/* Services Section */}
-      <section className="py-24 bg-white">
+      {/* What We Build Section */}
+      <section className="py-24 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Build</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Studio Inova is a solo-run digital project working across design and technology — building tools that feel simple on the surface, even when there's real work happening underneath.
+              Studio Inova builds focused SaaS products that solve one real problem well. Our first product is TrueOpen.
             </p>
+            <Button asChild className="mt-8" size="lg">
+              <Link to="/products">See Our Products</Link>
+            </Button>
           </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            <FadeIn delay={0.1} className="h-full">
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                  <Smartphone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">App Development</h3>
-                  <p className="text-[#4A5568] text-sm">Building simple, user-focused mobile and web apps — clean interfaces, no unnecessary complexity, made to just work.</p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2} className="h-full">
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                  <Cpu className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Utility Tools</h3>
-                  <p className="text-[#4A5568] text-sm">Building tools with whatever technology actually fits the problem — AI where it genuinely helps, and simpler approaches where it doesn't. The goal is always the right solution, not just the trendy one.</p>
-                </div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.3} className="h-full">
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                  <GraduationCap className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Academy</h3>
-                  <p className="text-[#4A5568] text-sm">I write ebooks that break down AI in a simple, practical way — no jargon, no assumed background, just what you actually need to understand and start using it. More topics are on the way as I keep learning and writing.</p>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 
@@ -237,7 +204,7 @@ export default function Home() {
                 step: "03",
                 icon: Code2,
                 title: "AI Integration",
-                desc: "We embed AI capabilities thoughtfully into each product — making smart automation feel natural, useful, and trustworthy.",
+                desc: "We use AI only where it genuinely improves the product, and keep everything else simple and reliable.",
               },
               {
                 step: "04",

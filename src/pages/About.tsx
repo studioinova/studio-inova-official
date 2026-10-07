@@ -1,6 +1,5 @@
 import { FadeIn } from "@/components/ui/FadeIn";
-import { Card, CardContent } from "@/components/ui/card";
-import { User, Target, Lightbulb, Shield } from "lucide-react";
+import { Target } from "lucide-react";
 
 export default function About() {
   return (
@@ -12,8 +11,7 @@ export default function About() {
             About Studio Inova
           </h1>
           <p className="text-xl text-black font-medium max-w-3xl mx-auto">
-            "We create AI-assisted tools that solve real problems with small,
-            calculated steps."
+            "We build SaaS products that solve real problems with small, calculated steps."
           </p>
         </FadeIn>
       </section>
@@ -27,18 +25,16 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Studio Inova is an independent, solo-run digital project with a
-                clear focus: build tools that actually work. As a regular user
-                of countless apps myself, I run into problems constantly — some
+                Studio Inova is a founder-led SaaS studio with a
+                clear focus: build products that actually work. As a regular user
+                of countless products myself, I run into problems constantly — some
                 with no real solution, some with a solution that just doesn't
                 work well. I don't want others to run into the same wall I did.
                 That's the reason each product exists.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                The work isn't limited to one type of tool or one kind of user —
-                some products use AI, some don't, whatever the problem actually
-                needs. By taking small, calculated steps, each product is built
-                to be stable, secure, and useful before anything else.
+                By taking small, calculated steps, each product is built
+                to respect the user and be stable, secure, and genuinely useful before anything else.
               </p>
             </div>
           </FadeIn>
@@ -52,11 +48,7 @@ export default function About() {
                 Our Vision
               </h2>
               <p className="text-lg text-foreground/80 font-medium leading-relaxed relative z-10">
-                Studio Inova's vision is simple: solve the problems I personally
-                run into, so that others don't have to face them either.
-                There's no fixed category, no fixed audience — just useful tools
-                and apps, built with AI where it helps and without it where it
-                doesn't, each one shaped by a real problem worth fixing.
+                Studio Inova aims to become a trusted SaaS studio known for simple, honest, and reliable products.
               </p>
             </div>
           </FadeIn>
@@ -91,17 +83,17 @@ export default function About() {
                 <h3 className="text-4xl font-extrabold text-foreground mb-1 tracking-tight">Sazid</h3>
 
                 <p className="text-black font-extrabold text-sm md:text-base mb-3 tracking-[0.2em] uppercase">
-                  Founder & Solo Builder, Studio Inova
+                  Founder & CEO, Studio Inova
                 </p>
 
                 <div className="space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
                   <p>
-                    Sazid is the sole builder behind Studio Inova, dedicated to simplifying complex AI technology into minimalist, high-impact tools — designed, built, and shipped independently.
+                    Sazid is the founder of Studio Inova, building simple and reliable SaaS products.
                   </p>
                 </div>
 
                 <p className="text-foreground font-bold text-sm md:text-base mt-8 tracking-wide">
-                  "At Studio Inova, we don't just build apps; we build solutions."
+                  "At Studio Inova, we build products that solve one problem well."
                 </p>
               </div>
 
