@@ -17,7 +17,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import noaAsset from "@/assets/noa-mascot.png.asset.json";
 
 // ১. ফর্ম ভ্যালিডেশন স্কিমা
 const formSchema = z.object({
@@ -250,7 +249,7 @@ export default function Contact() {
         <DialogContent className="sm:max-w-md rounded-3xl border-border/40">
           <div className="flex flex-col items-center text-center pt-2">
             <img
-              src={noaAsset.url}
+              src="/noa-mascot.png"
               alt="Noa, Studio Inova mascot"
               className="w-28 h-28 object-contain drop-shadow-[0_12px_20px_rgba(10,37,64,0.25)] select-none"
               draggable={false}
