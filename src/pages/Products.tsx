@@ -2,8 +2,6 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import trueOpenShot from "@/assets/trueopen-screenshot.png.asset.json";
-import trueOpenLogo from "@/assets/trueopen-logo.png.asset.json";
 
 
 
@@ -36,7 +34,7 @@ export default function Products() {
 
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src={trueOpenLogo.url}
+                    src="/trueopen-logo.png"
                     alt="TrueOpen logo"
                     className="w-12 h-12 rounded-xl shadow-md object-contain flex-shrink-0 self-center"
                     draggable={false}
@@ -83,7 +81,7 @@ export default function Products() {
               {/* Screenshot Visual Area — flat neutral panel (image has its own background/shadow) */}
               <div className="lg:w-1/2 bg-white p-6 md:p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-border min-h-[420px]">
                 <img
-                  src={trueOpenShot.url}
+                  src="/trueopen-screenshot.png"
                   alt="TrueOpen dashboard showing adjusted engagement score versus raw open rate"
                   className="w-full max-w-[520px] h-auto object-contain select-none"
                   loading="lazy"
