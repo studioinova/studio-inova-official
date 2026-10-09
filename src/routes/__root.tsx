@@ -16,7 +16,7 @@ import NotFound from "@/pages/not-found";
 
 import appCss from "../styles.css?url";
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: Error; reset?: () => void }) {
   console.error(error);
   const router = useRouter();
   return (
